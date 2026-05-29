@@ -23,7 +23,7 @@ export const packages: Package[] = [
     rating: 5.0,
     reviews: 428,
     description: "Our flagship Hajj package with VIP services. Experience the most profound spiritual journey of your lifetime with premium accommodations near the Haram, dedicated guides, and seamless logistics.",
-    image: "https://images.unsplash.com/photo-1565552643983-631d87e1f44a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?w=800&q=80",
     highlights: ["VIP Tents in Mina", "5-Star Hotels near Haram", "Dedicated Islamic Scholars", "All-inclusive Meals"],
     featured: true,
   },
@@ -78,7 +78,7 @@ export const packages: Package[] = [
     rating: 4.7,
     reviews: 112,
     description: "Explore the modern marvels and rich history of Kuwait. Visit the iconic Kuwait Towers, traditional souks, and beautiful waterfronts.",
-    image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1567074994308-df304d5611db?w=800&q=80",
     highlights: ["Kuwait Towers", "Souq Al Mubarakiya", "Grand Mosque", "Avenues Mall"],
   },
   {
@@ -90,7 +90,7 @@ export const packages: Package[] = [
     rating: 4.8,
     reviews: 145,
     description: "Experience the luxury and culture of Qatar. Stroll through Souq Waqif, marvel at Islamic art, and relax by the Arabian Gulf.",
-    image: "https://images.unsplash.com/photo-1610986708602-cb0bb28669b3?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1700901742651-6b353164caf3?w=800&q=80",
     highlights: ["Souq Waqif", "Museum of Islamic Art", "Pearl-Qatar", "Desert Safari"],
   },
 ];

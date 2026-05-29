@@ -7,9 +7,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const slides = [
-  { image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=1600&q=80", alt: "Grand Mosque in Mecca, Saudi Arabia" },
-  { image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=80", alt: "Dubai skyline at night" },
-  { image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=1600&q=80", alt: "Hagia Sophia and Istanbul skyline" },
+  { image: "https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?w=1600&q=90", alt: "Grand Mosque in Mecca, Saudi Arabia" },
+  { image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=90", alt: "Dubai skyline at night" },
+  { image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=1600&q=90", alt: "Hagia Sophia and Istanbul skyline" },
 ];
 
 export default function HeroSection() {
