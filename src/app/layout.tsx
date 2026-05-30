@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     siteName: "Seif Tour and Travel Agency",
     images: [
       {
-        url: "/images/hero-dubai.png",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Jebel Bright Travel Agency",
+        alt: "Seif Tour and Travel Agency",
       },
     ],
     locale: "en_US",

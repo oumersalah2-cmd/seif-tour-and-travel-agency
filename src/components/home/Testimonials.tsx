@@ -20,9 +20,9 @@ export default function Testimonials() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <SectionHeading
-          subtitle="Client Reviews"
+          subtitle="Testimonials"
           title="What Our Travelers Say"
-          description="Don't just take our word for it. Read about the unforgettable experiences our clients have had with Jebel Bright Travel."
+          description="Don't just take our word for it. Read about the unforgettable experiences our clients have had with Seif Tour and Travel Agency."
         />
 
         <div className="max-w-4xl mx-auto mt-12 relative">
