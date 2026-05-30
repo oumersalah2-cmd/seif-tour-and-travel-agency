@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 
 const inter = Inter({
@@ -37,18 +37,27 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+import { LanguageProvider } from "@/context/LanguageContext";
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 }>) {
+  const { lang } = await params;
+  const currentLang = (lang === "om" ? "om" : "en") as "en" | "om";
+
   return (
-    <html lang="en" suppressHydrationWarning className="scroll-smooth">
+    <html lang={currentLang} suppressHydrationWarning className="scroll-smooth">
       <body
         className={`${inter.variable} ${playfair.variable} font-sans bg-white dark:bg-dark-500 text-primary-700 dark:text-gray-100 antialiased selection:bg-accent-400/30 selection:text-accent-500 dark:selection:text-accent-300 transition-colors duration-300`}
       >
         <ThemeProvider>
-          {children}
+          <LanguageProvider lang={currentLang}>
+            {children}
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

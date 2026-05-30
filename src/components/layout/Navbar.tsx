@@ -6,18 +6,30 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Plane } from "lucide-react";
 import ThemeToggle from "@/components/ui/ThemeToggle";
 
-const navLinks = [
-  { href: "/#home", label: "Home" },
-  { href: "/#services", label: "Services" },
-  { href: "/#packages", label: "Packages" },
-  { href: "/#destinations", label: "Destinations" },
-  { href: "/#blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
-];
+import { useLanguage } from "@/context/LanguageContext";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const { t, lang } = useLanguage();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const toggleLanguage = () => {
+    const newLang = lang === "en" ? "om" : "en";
+    const currentPathWithoutLang = pathname.replace(`/${lang}`, "") || "/";
+    router.push(`/${newLang}${currentPathWithoutLang}`);
+  };
+
+  const navLinks = [
+    { href: `/${lang}/#home`, label: t.nav.home },
+    { href: `/${lang}/#services`, label: t.nav.services },
+    { href: `/${lang}/#packages`, label: t.nav.packages },
+    { href: `/${lang}/#destinations`, label: t.nav.destinations },
+    { href: `/${lang}/#testimonials`, label: t.nav.testimonials },
+    { href: `/${lang}/contact`, label: t.nav.contact },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +63,7 @@ export default function Navbar() {
         }`}
       >
         <nav className="max-w-7xl mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5 group">
+          <Link href={`/${lang}`} className="flex items-center gap-2.5 group">
             <div className="relative">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-400 via-accent-300 to-accent-500 flex items-center justify-center shadow-glow group-hover:shadow-glow-lg transition-shadow duration-300">
                 <Plane className="w-5 h-5 text-white -rotate-45" />
@@ -92,13 +104,33 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
+            <button
+              onClick={toggleLanguage}
+              className={`font-bold px-3 py-1.5 rounded-md border text-xs tracking-wider transition-colors ${
+                isScrolled
+                  ? "border-primary-200 text-primary-700 hover:bg-primary-50 dark:border-dark-100 dark:text-white dark:hover:bg-dark-200"
+                  : "border-white/30 text-white hover:bg-white/10"
+              }`}
+            >
+              {lang === "en" ? "OM" : "EN"}
+            </button>
             <ThemeToggle />
-            <Link href="/#packages" className="btn-primary text-sm px-6 py-2.5">
+            <Link href={`/${lang}/#packages`} className="btn-primary text-sm px-6 py-2.5">
               Book Now
             </Link>
           </div>
 
           <div className="flex lg:hidden items-center gap-3">
+            <button
+              onClick={toggleLanguage}
+              className={`font-bold px-2 py-1 rounded-md border text-xs transition-colors ${
+                isScrolled || isMobileOpen
+                  ? "border-primary-200 text-primary-700 dark:border-dark-100 dark:text-white"
+                  : "border-white/30 text-white"
+              }`}
+            >
+              {lang === "en" ? "OM" : "EN"}
+            </button>
             <ThemeToggle />
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
