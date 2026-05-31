@@ -5,10 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { testimonials } from "@/data/testimonials";
+import { useLanguage } from "@/context/LanguageContext";
+import { getTestimonials } from "@/data/testimonials";
 
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
+  const { lang, t } = useLanguage();
+  const testimonials = getTestimonials(lang);
 
   const next = () => setCurrent((prev) => (prev + 1) % testimonials.length);
   const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
@@ -20,9 +23,9 @@ export default function Testimonials() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <SectionHeading
-          subtitle="Testimonials"
-          title="What Our Travelers Say"
-          description="Don't just take our word for it. Read about the unforgettable experiences our clients have had with Seif Tour and Travel Agency."
+          subtitle={lang === "en" ? "Testimonials" : "Yaada Maamiltootaa"}
+          title={lang === "en" ? "What Our Travelers Say" : "Imaltoonni Keenya Maal Jedhu"}
+          description={lang === "en" ? "Don't just take our word for it. Read about the unforgettable experiences our clients have had with Seif Tour and Travel Agency." : "Hasaa keenya qofa hin amaniinaa. Muuxannoo dagatamuun hin danda'amne maamiltoonni keenya Seif Tour wajjin qaban dubbisaa."}
         />
 
         <div className="max-w-4xl mx-auto mt-12 relative">

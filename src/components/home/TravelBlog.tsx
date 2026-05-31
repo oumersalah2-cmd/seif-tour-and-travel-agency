@@ -5,16 +5,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { blogPosts } from "@/data/blog";
+import { useLanguage } from "@/context/LanguageContext";
+import { getBlogPosts } from "@/data/blog";
 
 export default function TravelBlog() {
+  const { lang, t } = useLanguage();
+  const blogPosts = getBlogPosts(lang);
+
   return (
     <section id="blog" className="section-padding bg-white dark:bg-dark-500">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
-          subtitle="Travel Insights"
-          title="Latest from Our Blog"
-          description="Travel tips, destination guides, and inspiring stories to help you plan your next adventure."
+          subtitle={lang === "en" ? "Travel Insights" : "Hubannoo Imalaa"}
+          title={lang === "en" ? "Latest from Our Blog" : "Oduu Haaraa Buloogii Keenya Irraa"}
+          description={lang === "en" ? "Travel tips, destination guides, and inspiring stories to help you plan your next adventure." : "Gorsa imalaa, qajeelfama bakkeewwanii, fi seenaawwan kakaasoo imala keessan itti aanu karoorfachuuf isin gargaaran."}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
@@ -27,7 +31,7 @@ export default function TravelBlog() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group flex flex-col bg-white dark:bg-dark-300 rounded-2xl overflow-hidden border border-gray-100 dark:border-dark-100 shadow-soft hover:shadow-soft-lg transition-all duration-300"
             >
-              <Link href={`#blog-${post.id}`} className="relative h-56 overflow-hidden block">
+              <Link href={`/${lang}/#blog-${post.id}`} className="relative h-56 overflow-hidden block">
                 <Image
                   src={post.image}
                   alt={post.title}
@@ -52,7 +56,7 @@ export default function TravelBlog() {
                   </div>
                 </div>
 
-                <Link href={`#blog-${post.id}`} className="block mb-3">
+                <Link href={`/${lang}/#blog-${post.id}`} className="block mb-3">
                   <h3 className="font-display font-bold text-xl text-primary-700 dark:text-white group-hover:text-accent-500 dark:group-hover:text-accent-300 transition-colors line-clamp-2">
                     {post.title}
                   </h3>
@@ -64,13 +68,13 @@ export default function TravelBlog() {
 
                 <div className="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-dark-100 mt-auto">
                   <span className="text-sm font-medium text-gray-900 dark:text-gray-200">
-                    By {post.author}
+                    {lang === "en" ? "By" : "Kan Barreesse"} {post.author}
                   </span>
                   <Link
-                    href={`#blog-${post.id}`}
+                    href={`/${lang}/#blog-${post.id}`}
                     className="flex items-center gap-1.5 text-sm font-bold text-accent-500 dark:text-accent-400 group-hover:text-primary-600 dark:group-hover:text-white transition-colors"
                   >
-                    Read More
+                    {lang === "en" ? "Read More" : "Dabalata Dubbisi"}
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>

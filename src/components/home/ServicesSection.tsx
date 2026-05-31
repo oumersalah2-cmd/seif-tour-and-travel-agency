@@ -2,13 +2,21 @@
 
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { services, serviceIcons } from "@/data/services";
+import { getServices, serviceIcons } from "@/data/services";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ServicesSection() {
+  const { lang, t } = useLanguage();
+  const services = getServices(lang);
+
   return (
     <section id="services" className="section-padding bg-gray-50/50 dark:bg-dark-400">
       <div className="max-w-7xl mx-auto">
-        <SectionHeading subtitle="What We Offer" title="Our Premium Services" description="From flight bookings to custom travel planning, we provide comprehensive travel solutions tailored to your needs." />
+        <SectionHeading 
+          subtitle={t.services.subtitle} 
+          title={t.services.title} 
+          description={t.services.description} 
+        />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service, index) => {

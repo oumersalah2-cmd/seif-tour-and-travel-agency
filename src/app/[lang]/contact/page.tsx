@@ -8,6 +8,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { useLanguage } from "@/context/LanguageContext";
 
 type ContactFormData = {
   name: string;
@@ -18,6 +19,7 @@ type ContactFormData = {
 };
 
 export default function ContactPage() {
+  const { lang, t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   
@@ -38,27 +40,27 @@ export default function ContactPage() {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Call Us",
+      title: t.contact.callUs,
       details: ["+251 911 123 456", "+251 116 123 456"],
-      description: "We are available 24/7 for urgent inquiries.",
+      description: t.contact.callDesc,
     },
     {
       icon: Mail,
-      title: "Email Us",
+      title: t.contact.emailUs,
       details: ["info@seiftour.com", "support@seiftour.com"],
-      description: "Drop us a line anytime. We reply within 24 hours.",
+      description: t.contact.emailDesc,
     },
     {
       icon: MapPin,
-      title: "Visit Us",
+      title: t.contact.visitUs,
       details: ["Bole Road, Near Friendship Mall", "Addis Ababa, Ethiopia"],
-      description: "Our office is open from Monday to Saturday.",
+      description: t.contact.visitDesc,
     },
     {
       icon: Clock,
-      title: "Working Hours",
+      title: t.contact.workingHours,
       details: ["Mon - Fri: 8:30 AM - 5:30 PM", "Sat: 9:00 AM - 1:00 PM"],
-      description: "Closed on Sundays and Public Holidays.",
+      description: t.contact.hoursDesc,
     },
   ];
 
@@ -69,9 +71,9 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           
           <SectionHeading
-            subtitle="Get In Touch"
-            title="Contact Our Travel Experts"
-            description="Have a question or ready to book your next trip? Reach out to us and we'll get back to you as soon as possible."
+            subtitle={t.contact.subtitle}
+            title={t.contact.title}
+            description={t.contact.description}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mt-12">
@@ -116,7 +118,7 @@ export default function ContactPage() {
               className="lg:col-span-3 bg-white dark:bg-dark-300 rounded-3xl p-8 md:p-10 shadow-soft border border-gray-100 dark:border-dark-100"
             >
               <h3 className="font-display font-bold text-2xl text-primary-700 dark:text-white mb-6">
-                Send Us a Message
+                {t.contact.sendMessage}
               </h3>
 
               {isSuccess ? (
@@ -127,10 +129,10 @@ export default function ContactPage() {
                 >
                   <CheckCircle2 className="w-16 h-16 text-green-500 mx-auto mb-4" />
                   <h4 className="text-xl font-bold text-green-800 dark:text-green-400 mb-2">
-                    Message Sent Successfully!
+                    {t.contact.successTitle}
                   </h4>
                   <p className="text-green-700 dark:text-green-500/80">
-                    Thank you for reaching out. One of our travel experts will contact you shortly.
+                    {t.contact.successDesc}
                   </p>
                 </motion.div>
               ) : (
@@ -139,12 +141,12 @@ export default function ContactPage() {
                     {/* Name */}
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                        Full Name *
+                        {t.contact.nameLabel}
                       </label>
                       <input
                         {...register("name", { required: "Name is required" })}
                         type="text"
-                        placeholder="John Doe"
+                        placeholder={t.contact.namePlaceholder}
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-dark-100 bg-gray-50 dark:bg-dark-400 text-primary-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-accent-400 transition"
                       />
                       {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
@@ -153,7 +155,7 @@ export default function ContactPage() {
                     {/* Email */}
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                        Email Address *
+                        {t.contact.emailLabel}
                       </label>
                       <input
                         {...register("email", { 
@@ -161,7 +163,7 @@ export default function ContactPage() {
                           pattern: { value: /^\S+@\S+$/i, message: "Invalid email address" }
                         })}
                         type="email"
-                        placeholder="john@example.com"
+                        placeholder={t.contact.emailPlaceholder}
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-dark-100 bg-gray-50 dark:bg-dark-400 text-primary-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-accent-400 transition"
                       />
                       {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
@@ -170,12 +172,12 @@ export default function ContactPage() {
                     {/* Phone */}
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                        Phone Number
+                        {t.contact.phoneLabel}
                       </label>
                       <input
                         {...register("phone")}
                         type="tel"
-                        placeholder="+251 900 000 000"
+                        placeholder={t.contact.phonePlaceholder}
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-dark-100 bg-gray-50 dark:bg-dark-400 text-primary-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-accent-400 transition"
                       />
                     </div>
@@ -183,12 +185,12 @@ export default function ContactPage() {
                     {/* Subject */}
                     <div>
                       <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                        Subject *
+                        {t.contact.subjectLabel}
                       </label>
                       <input
                         {...register("subject", { required: "Subject is required" })}
                         type="text"
-                        placeholder="e.g. Dubai Tour Inquiry"
+                        placeholder={t.contact.subjectPlaceholder}
                         className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-dark-100 bg-gray-50 dark:bg-dark-400 text-primary-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-accent-400 transition"
                       />
                       {errors.subject && <p className="text-red-500 text-xs mt-1">{errors.subject.message}</p>}
@@ -198,12 +200,12 @@ export default function ContactPage() {
                   {/* Message */}
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                      Your Message *
+                      {t.contact.messageLabel}
                     </label>
                     <textarea
                       {...register("message", { required: "Message is required" })}
                       rows={5}
-                      placeholder="Tell us about your travel plans..."
+                      placeholder={t.contact.messagePlaceholder}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-dark-100 bg-gray-50 dark:bg-dark-400 text-primary-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-accent-400 transition resize-none"
                     ></textarea>
                     {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>}
@@ -215,11 +217,11 @@ export default function ContactPage() {
                     className="btn-primary w-full py-4 gap-2 text-base disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
-                      "Sending..."
+                      t.contact.sending
                     ) : (
                       <>
                         <Send className="w-5 h-5" />
-                        Send Message
+                        {t.contact.send}
                       </>
                     )}
                   </button>

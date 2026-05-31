@@ -3,54 +3,35 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, Coins, HeartHandshake, LockKeyhole, Headphones, Zap } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { useLanguage } from "@/context/LanguageContext";
 
-const reasons = [
-  {
-    icon: ShieldCheck,
-    title: "Hajj & Umrah Specialists",
-    description: "Dedicated scholars, VIP tents, and premium accommodations near the Haram for a deeply spiritual journey.",
-  },
-  {
-    icon: Coins,
-    title: "Middle East Experts",
-    description: "Unrivaled connections across Saudi Arabia, UAE, Turkey, Kuwait, and Qatar ensuring the best experiences.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Personalized Services",
-    description: "Tailor-made itineraries designed specifically around your preferences, schedule, and budget.",
-  },
-  {
-    icon: LockKeyhole,
-    title: "Secure Booking",
-    description: "Bank-level encryption and secure payment gateways ensure your personal information is protected.",
-  },
-  {
-    icon: Headphones,
-    title: "24/7 Dedicated Support",
-    description: "Round-the-clock assistance throughout your pilgrimage or tour for complete peace of mind.",
-  },
-  {
-    icon: Zap,
-    title: "Fast Visa Processing",
-    description: "Expert assistance for rapid Umrah, Hajj, tourist, and Middle East work visa approvals without the usual hassle.",
-  },
+const reasonIcons = [
+  ShieldCheck,
+  Coins,
+  HeartHandshake,
+  LockKeyhole,
+  Headphones,
+  Zap
 ];
 
 export default function WhyChooseUs() {
+  const { t } = useLanguage();
+
   return (
     <section className="section-padding bg-white dark:bg-dark-500">
       <div className="max-w-7xl mx-auto">
         <SectionHeading
-          subtitle="Our Advantages"
-          title="Why Choose Seif Tour?"
-          description="We are your premier partner for Hajj, Umrah, and exclusive Middle East travel experiences."
+          subtitle={t.whyChooseUs.subtitle}
+          title={t.whyChooseUs.title}
+          description={t.whyChooseUs.description}
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {reasons.map((reason, index) => (
+          {t.whyChooseUs.reasons.map((reason, index) => {
+            const Icon = reasonIcons[index];
+            return (
             <motion.div
-              key={reason.title}
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -64,7 +45,7 @@ export default function WhyChooseUs() {
 
               <div className="relative z-10">
                 <div className="w-12 h-12 rounded-full bg-accent-400/10 flex items-center justify-center mb-6 text-accent-500 group-hover:bg-accent-400 group-hover:text-white transition-colors duration-300 shadow-sm">
-                  <reason.icon className="w-6 h-6" />
+                  <Icon className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-xl text-primary-700 dark:text-white mb-3">
                   {reason.title}
@@ -74,7 +55,7 @@ export default function WhyChooseUs() {
                 </p>
               </div>
             </motion.div>
-          ))}
+          )})}
         </div>
       </div>
     </section>

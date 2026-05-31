@@ -5,24 +5,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { destinations } from "@/data/destinations";
+import { useLanguage } from "@/context/LanguageContext";
+import { getDestinations } from "@/data/destinations";
 
 export default function PopularDestinations() {
+  const { lang, t } = useLanguage();
+  const destinations = getDestinations(lang);
+
   return (
     <section id="destinations" className="section-padding bg-gray-50/50 dark:bg-dark-400">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <SectionHeading
-            subtitle="Explore"
-            title="Popular Destinations"
-            description="Discover the world's most breathtaking locations. Where will your next adventure take you?"
+            subtitle={lang === "en" ? "Explore" : "Daawwadhaa"}
+            title={lang === "en" ? "Popular Destinations" : "Bakkeewwan Beekamoo"}
+            description={lang === "en" ? "Discover the world's most breathtaking locations. Where will your next adventure take you?" : "Bakkeewwan addunyaa babbareedoo ta'an daawwadhaa. Imalli keessan itti aanu eessatti isin geessa?"}
             centered={false}
           />
           <Link
-            href="#packages"
+            href={`/${lang}/#packages`}
             className="hidden md:flex items-center gap-2 text-primary-600 dark:text-gray-300 font-semibold hover:text-accent-500 transition-colors group"
           >
-            View All Destinations
+            {lang === "en" ? "View All Destinations" : "Bakkeewwan Hunda Daawwadhaa"}
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
@@ -52,7 +56,7 @@ export default function PopularDestinations() {
               <h3 className="font-display font-bold text-3xl text-white mb-2">
                 {destinations[0].name}
               </h3>
-              <p className="text-gray-200 text-sm">{destinations[0].tours} Tours Available</p>
+              <p className="text-gray-200 text-sm">{destinations[0].tours} {lang === "en" ? "Tours Available" : "Daawwannaan Ni Argama"}</p>
             </div>
           </motion.div>
 
@@ -81,17 +85,17 @@ export default function PopularDestinations() {
                 <h3 className="font-display font-bold text-xl text-white mb-1">
                   {dest.name}
                 </h3>
-                <p className="text-gray-300 text-xs">{dest.tours} Tours</p>
+                <p className="text-gray-300 text-xs">{dest.tours} {lang === "en" ? "Tours" : "Daawwannaa"}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
         <Link
-          href="#packages"
+          href={`/${lang}/#packages`}
           className="flex md:hidden items-center justify-center gap-2 mt-8 text-primary-600 dark:text-gray-300 font-semibold"
         >
-          View All Destinations
+          {lang === "en" ? "View All Destinations" : "Bakkeewwan Hunda Daawwadhaa"}
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>

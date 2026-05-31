@@ -1,15 +1,18 @@
 "use client";
 
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
-
-const stats = [
-  { label: "Happy Travelers", value: 15000, suffix: "+" },
-  { label: "Destinations", value: 120, suffix: "+" },
-  { label: "Successful Trips", value: 8500, suffix: "+" },
-  { label: "Years Experience", value: 12, suffix: "+" },
-];
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function StatsSection() {
+  const { t } = useLanguage();
+
+  const stats = [
+    { label: t.stats.travelers, value: 15000, suffix: "+" },
+    { label: t.stats.destinations, value: 120, suffix: "+" },
+    { label: t.stats.trips, value: 8500, suffix: "+" },
+    { label: t.stats.experience, value: 12, suffix: "+" },
+  ];
+
   return (
     <section className="relative py-24 bg-primary-700 dark:bg-dark-600 overflow-hidden">
       {/* Background Pattern */}

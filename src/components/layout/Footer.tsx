@@ -3,23 +3,24 @@
 import Link from "next/link";
 import { Plane, Mail, Phone, MapPin, Globe, Camera, MessageCircle, Video, Briefcase, Send } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
-const quickLinks = [
-  { href: "/#home", label: "Home" },
-  { href: "/#services", label: "Services" },
-  { href: "/#packages", label: "Tour Packages" },
-  { href: "/#destinations", label: "Destinations" },
-  { href: "/#testimonials", label: "Testimonials" },
-  { href: "/contact", label: "Contact Us" },
+const getQuickLinks = (lang: string) => [
+  { href: `/${lang}/#home`, label: lang === "en" ? "Home" : "Manni" },
+  { href: `/${lang}/#services`, label: lang === "en" ? "Services" : "Tajaajila" },
+  { href: `/${lang}/#packages`, label: lang === "en" ? "Tour Packages" : "Paakeejota Daawwannaa" },
+  { href: `/${lang}/#destinations`, label: lang === "en" ? "Destinations" : "Bakkeewwan" },
+  { href: `/${lang}/#testimonials`, label: lang === "en" ? "Testimonials" : "Yaada" },
+  { href: `/${lang}/contact`, label: lang === "en" ? "Contact Us" : "Nu Qunnamaa" },
 ];
 
-const serviceLinks = [
-  "International Flights",
-  "Tour Packages",
-  "Visa Assistance",
-  "Hotel Reservations",
-  "Travel Insurance",
-  "Custom Planning",
+const getServiceLinks = (lang: string) => [
+  lang === "en" ? "International Flights" : "Xiyyaara Addunyaa",
+  lang === "en" ? "Tour Packages" : "Paakeejota Daawwannaa",
+  lang === "en" ? "Visa Assistance" : "Gargaarsa Viizaa",
+  lang === "en" ? "Hotel Reservations" : "Hoteela Qabsiisuu",
+  lang === "en" ? "Travel Insurance" : "Inshuraansii Imalaa",
+  lang === "en" ? "Custom Planning" : "Karoora Dhuunfaa",
 ];
 
 const socialLinks = [
@@ -31,8 +32,12 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const { lang, t } = useLanguage();
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+
+  const quickLinks = getQuickLinks(lang);
+  const serviceLinks = getServiceLinks(lang);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,7 +56,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 pt-20 pb-8 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
-            <Link href="/" className="flex items-center gap-2.5 mb-6 group">
+            <Link href={`/${lang}`} className="flex items-center gap-2.5 mb-6 group">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-400 via-accent-300 to-accent-500 flex items-center justify-center">
                 <Plane className="w-5 h-5 text-white -rotate-45" />
               </div>
@@ -63,9 +68,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed mb-6">
-              Your trusted partner for extraordinary travel experiences. We craft
-              unforgettable journeys with personalized service, competitive
-              pricing, and expert guidance to destinations worldwide.
+              {t.footer.description}
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
@@ -81,7 +84,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-bold text-lg mb-6">Quick Links</h4>
+            <h4 className="font-display font-bold text-lg mb-6">{t.footer.quickLinks}</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
@@ -94,7 +97,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-bold text-lg mb-6">Our Services</h4>
+            <h4 className="font-display font-bold text-lg mb-6">{t.footer.ourServices}</h4>
             <ul className="space-y-3">
               {serviceLinks.map((service) => (
                 <li key={service}>
@@ -107,11 +110,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display font-bold text-lg mb-6">Get in Touch</h4>
+            <h4 className="font-display font-bold text-lg mb-6">{t.footer.getInTouch}</h4>
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-accent-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">Bole Road, Addis Ababa,<br />Ethiopia</span>
+                <span className="text-gray-300 text-sm">{t.footer.address}</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-accent-400 flex-shrink-0" />
@@ -123,11 +126,11 @@ export default function Footer() {
               </div>
             </div>
 
-            <h5 className="font-semibold text-sm mb-3">Newsletter</h5>
+            <h5 className="font-semibold text-sm mb-3">{t.footer.newsletter}</h5>
             <form onSubmit={handleSubscribe} className="flex gap-2">
               <input
                 type="email"
-                placeholder="Your email"
+                placeholder={t.footer.emailPlaceholder}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -139,7 +142,7 @@ export default function Footer() {
             </form>
             {subscribed && (
               <p className="text-accent-300 text-xs mt-2 animate-fade-in">
-                ✓ Subscribed successfully!
+                ✓ {t.footer.subscribed}
               </p>
             )}
           </div>
@@ -147,11 +150,11 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Seif Tour and Travel Agency. All rights reserved.
+            © {new Date().getFullYear()} Seif Tour and Travel Agency. {t.footer.rights}
           </p>
           <div className="flex gap-6 text-sm text-gray-400">
-            <span className="hover:text-accent-300 cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-accent-300 cursor-pointer transition-colors">Terms of Service</span>
+            <span className="hover:text-accent-300 cursor-pointer transition-colors">{t.footer.privacy}</span>
+            <span className="hover:text-accent-300 cursor-pointer transition-colors">{t.footer.terms}</span>
           </div>
         </div>
       </div>

@@ -4,9 +4,12 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { faqItems } from "@/data/faq";
+import { useLanguage } from "@/context/LanguageContext";
+import { getFaqItems } from "@/data/faq";
 
 export default function FAQ() {
+  const { lang, t } = useLanguage();
+  const faqItems = getFaqItems(lang);
   const [openId, setOpenId] = useState<string | null>(faqItems[0].id);
 
   const toggleFAQ = (id: string) => {
@@ -17,9 +20,9 @@ export default function FAQ() {
     <section className="section-padding bg-gray-50/50 dark:bg-dark-400">
       <div className="max-w-4xl mx-auto">
         <SectionHeading
-          subtitle="Common Questions"
-          title="Frequently Asked Questions"
-          description="Find quick answers to common questions about our travel services, booking process, and more."
+          subtitle={lang === "en" ? "Common Questions" : "Gaaffilee Yeroo Baay'ee Gaafataman"}
+          title={lang === "en" ? "Frequently Asked Questions" : "Gaaffilee Irra Deddeebiin Gaafataman"}
+          description={lang === "en" ? "Find quick answers to common questions about our travel services, booking process, and more." : "Tajaajila imalaa keenya, adeemsa qabsiisuu fi kkf irratti gaaffilee yeroo baay'ee gaafatamaniif deebii ariitii argadhaa."}
         />
 
         <div className="space-y-4 mt-12">
