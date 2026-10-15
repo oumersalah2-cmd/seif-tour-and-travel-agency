@@ -24,7 +24,7 @@ export const en = {
       quoteFirst: "Quote first — documents later",
       passportCheck: "Strict 6-month passport checks",
       diaspora: "Diaspora family sponsorship",
-      support: "24/7 Telegram assistance (@Seifa95)",
+      support: "24/7 WhatsApp support (+251 911 123 456)",
     }
   },
   trustPillars: {
@@ -150,8 +150,8 @@ export const en = {
       },
       {
         step: "04",
-        title: "Travel Ready & Telegram Support",
-        desc: "Receive approved visas, confirmed e-tickets, hotel vouchers, and attend the pre-departure briefing. Join our 24/7 Telegram support group (@Seifa95)."
+        title: "Travel Ready & WhatsApp Support",
+        desc: "Receive approved visas, confirmed e-tickets, hotel vouchers, and attend the pre-departure briefing. Join our 24/7 WhatsApp support group (+251 911 123 456)."
       }
     ]
   },
@@ -193,10 +193,10 @@ export const en = {
     benefits: [
       "Secure diaspora payments and transparent invoices in USD, EUR, or ETB",
       "Local Addis Ababa team provides door-to-office documentation guidance for your family",
-      "Regular WhatsApp & Telegram progress updates sent directly to you abroad",
+      "Regular WhatsApp progress updates sent directly to you abroad",
       "Full on-ground chaperone service in Makkah & Madinah for elderly pilgrims"
     ],
-    ctaTelegram: "Chat with Office on Telegram (@Seifa95)",
+    ctaWhatsApp: "Chat with Office on WhatsApp (+251 911 123 456)",
     ctaQuote: "Request Diaspora Quote",
   },
   officeDesk: {
@@ -205,7 +205,7 @@ export const en = {
     subtitle: "Walk into our reception on Bole Road for face-to-face consultations, transparent quotes, and clear travel orientation.",
     address: "Bole Road, Addis Ababa, Ethiopia",
     hours: "Monday – Saturday: 8:30 AM – 6:30 PM",
-    phone: "+251 900 000 000 / Telegram @Seifa95",
+    phone: "+251 911 123 456 / +251 116 123 456",
   },
   services: {
     subtitle: "Our Core Focus",
@@ -301,7 +301,7 @@ export const en = {
     emailLabel: "Email Address *",
     emailPlaceholder: "ahmad@example.com",
     phoneLabel: "Phone Number",
-    phonePlaceholder: "+251 900 000 000",
+    phonePlaceholder: "+251 911 123 456",
     subjectLabel: "Subject *",
     subjectPlaceholder: "e.g. Umrah Package / Sof Omar Tour / Ticket Booking",
     messageLabel: "Your Message *",

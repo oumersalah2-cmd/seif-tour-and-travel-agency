@@ -90,8 +90,8 @@ export default function HeroSection() {
           <span className="px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
             🌍 {t.hero.pills.diaspora}
           </span>
-          <a href="https://t.me/Seifa95" target="_blank" rel="noopener noreferrer" className="px-3.5 py-1.5 rounded-full bg-accent-400/30 hover:bg-accent-400/50 backdrop-blur-md border border-accent-400/40 text-accent-300 text-xs font-medium transition">
-            ✈ {t.hero.pills.support}
+          <a href="https://wa.me/251911123456?text=Hello%20HIKAYA%2C%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" rel="noopener noreferrer" className="px-3.5 py-1.5 rounded-full bg-[#25D366]/30 hover:bg-[#25D366]/50 backdrop-blur-md border border-[#25D366]/40 text-emerald-200 text-xs font-medium transition">
+            💬 {t.hero.pills.support}
           </a>
         </motion.div>
 

@@ -172,7 +172,7 @@ export default function UmrahTimeline() {
                         {lang === "en" ? "Coordinator Support" : "Qindeessaa Garee"}
                       </div>
                       <div className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
-                        {lang === "en" ? "24/7 Ethiopian on-ground chaperone & Telegram desk (@Seifa95)" : "Gargaarsa qindeessaa sa'aatii 24 fi Telekiraamii (@Seifa95)"}
+                        {lang === "en" ? "24/7 Ethiopian on-ground chaperone & WhatsApp desk (+251 911 123 456)" : "Gargaarsa qindeessaa sa'aatii 24 fi Waatsaappii (+251 911 123 456)"}
                       </div>
                     </div>
                   </div>

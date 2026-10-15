@@ -12,7 +12,6 @@ const getQuickLinks = (lang: string) => [
   { href: `/${lang}/#schedule`, label: lang === "en" ? "11-Day Schedule" : "Sagantaa Guyyaa 11" },
   { href: `/${lang}/#ziyarat`, label: lang === "en" ? "Sacred Ziyarat" : "Ziyaaraa Seenaa" },
   { href: `/${lang}/#diaspora`, label: lang === "en" ? "Diaspora Sponsorship" : "Kaffaltii Alaa (Diyaaspooraa)" },
-  { href: `/${lang}/#destinations`, label: lang === "en" ? "Destinations" : "Bakkeewwan" },
   { href: `/${lang}/contact`, label: lang === "en" ? "Contact Us" : "Nu Qunnamaa" },
 ];
 
@@ -26,7 +25,7 @@ const getServiceLinks = (lang: string) => [
 ];
 
 const socialLinks = [
-  { icon: Send, href: "https://t.me/Seifa95", label: "Telegram" },
+  { icon: MessageCircle, href: "https://wa.me/251911123456", label: "WhatsApp" },
   { icon: Globe, href: "#", label: "Website" },
   { icon: Camera, href: "#", label: "Instagram" },
   { icon: MessageCircle, href: "#", label: "Twitter" },
@@ -121,20 +120,20 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-accent-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">+251 911 123 456</span>
+                <span className="text-gray-300 text-sm">+251 911 123 456 / +251 116 123 456</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-accent-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">info@hikayatour.com</span>
               </div>
               <a
-                href="https://t.me/Seifa95"
+                href="https://wa.me/251911123456?text=Hello%20HIKAYA%2C%20I%20would%20like%20to%20inquire%20about%20your%20services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-300 hover:text-accent-300 transition-colors group"
               >
-                <Send className="w-4 h-4 text-accent-400 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="text-sm">Telegram: @Seifa95</span>
+                <MessageCircle className="w-4 h-4 text-[#25D366] flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="text-sm">WhatsApp: +251 911 123 456</span>
               </a>
             </div>
 

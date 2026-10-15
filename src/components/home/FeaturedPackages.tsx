@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Star, Clock, MapPin, Users, Send, Check } from "lucide-react";
+import { Star, Clock, MapPin, Users, MessageCircle, Check } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import BookingModal from "@/components/ui/BookingModal";
 import { useLanguage } from "@/context/LanguageContext";
@@ -147,15 +147,15 @@ export default function FeaturedPackages() {
                 </button>
 
                 <a
-                  href={`https://t.me/Seifa95?text=Hello%20HIKAYA%2C%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(
+                  href={`https://wa.me/251911123456?text=Hello%20HIKAYA%2C%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(
                     pkg.title
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-2.5 rounded-xl border border-gray-200 dark:border-dark-100 hover:border-accent-400/50 text-xs font-semibold text-gray-700 dark:text-gray-300 hover:text-accent-500 flex items-center justify-center gap-1.5 transition"
+                  className="w-full py-2.5 rounded-xl border border-gray-200 dark:border-dark-100 hover:border-[#25D366]/50 text-xs font-semibold text-gray-700 dark:text-gray-300 hover:text-[#25D366] flex items-center justify-center gap-1.5 transition"
                 >
-                  <Send className="w-3.5 h-3.5 text-accent-400" />
-                  <span>{lang === "en" ? "Inquire on Telegram (@Seifa95)" : "Telekiraamiin Gaafadhaa (@Seifa95)"}</span>
+                  <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
+                  <span>{lang === "en" ? "Inquire on WhatsApp (+251 911 123 456)" : "Waatsaappiin Gaafadhaa (+251 911 123 456)"}</span>
                 </a>
               </div>
             </motion.div>

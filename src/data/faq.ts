@@ -8,7 +8,7 @@ export const getFaqItems = (lang: "en" | "om"): FAQItem[] => [
   {
     id: "faq-1",
     question: lang === "en" ? "How do I book an Umrah package or tour with HIKAYA Tour and Travel Agency?" : "Akkamittin paakeejii Umraa ykn daawwannaa HIKAYA Tour wajjin qabsiisuu danda'a?",
-    answer: lang === "en" ? "You can book directly through our website by clicking 'Book Now', or contact our team via our 24/7 Telegram chatbot (@Seifa95), phone, or email. We will guide you through package details, visa processing, flight schedules, and personalized hotel accommodations." : "Marsariitii keenya irraan mallattoo 'Amma Qabsiisi' jedhu fayyadamuun, ykn chatbot Telegram keenya (@Seifa95), bilbila, fi iimeeliidhaan nu qunnamuun qabsiisuu dandeessu. Ogeeyyiin keenya odeeffannoo paakeejii, viizaa, xiyyaaraa fi hoteelaa hunda isiniif qopheessu.",
+    answer: lang === "en" ? "You can book directly through our website by clicking 'Book Now', or contact our team via our 24/7 WhatsApp desk (+251 911 123 456), phone, or email. We will guide you through package details, visa processing, flight schedules, and personalized hotel accommodations." : "Marsariitii keenya irraan mallattoo 'Amma Qabsiisi' jedhu fayyadamuun, ykn Waatsaappii keenya (+251 911 123 456), bilbila, fi iimeeliidhaan nu qunnamuun qabsiisuu dandeessu. Ogeeyyiin keenya odeeffannoo paakeejii, viizaa, xiyyaaraa fi hoteelaa hunda isiniif qopheessu.",
   },
   {
     id: "faq-2",

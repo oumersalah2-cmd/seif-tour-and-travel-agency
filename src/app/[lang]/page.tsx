@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import TelegramButton from "@/components/layout/TelegramButton";
+import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import HeroSection from "@/components/home/HeroSection";
 import SearchBooking from "@/components/home/SearchBooking";
 import TrustPillars from "@/components/home/TrustPillars";
@@ -10,12 +10,10 @@ import UmrahTimeline from "@/components/home/UmrahTimeline";
 import ZiyaratHub from "@/components/home/ZiyaratHub";
 import BookingWorkflow from "@/components/home/BookingWorkflow";
 import DiasporaSection from "@/components/home/DiasporaSection";
-import PopularDestinations from "@/components/home/PopularDestinations";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import OfficeDeskSection from "@/components/home/OfficeDeskSection";
 import StatsSection from "@/components/home/StatsSection";
 import Testimonials from "@/components/home/Testimonials";
-import TravelBlog from "@/components/home/TravelBlog";
 import FAQ from "@/components/home/FAQ";
 
 export default function Home() {
@@ -32,16 +30,14 @@ export default function Home() {
         <ZiyaratHub />
         <BookingWorkflow />
         <DiasporaSection />
-        <PopularDestinations />
         <WhyChooseUs />
         <OfficeDeskSection />
         <StatsSection />
         <Testimonials />
-        <TravelBlog />
         <FAQ />
       </main>
       <Footer />
-      <TelegramButton />
+      <WhatsAppButton />
     </>
   );
 }

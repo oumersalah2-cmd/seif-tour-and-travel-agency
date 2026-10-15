@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CheckCircle2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import TelegramButton from "@/components/layout/TelegramButton";
+import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -39,11 +39,11 @@ export default function ContactPage() {
 
   const contactInfo = [
     {
-      icon: Send,
-      title: "Telegram Chatbot",
-      details: ["@Seifa95", "https://t.me/Seifa95"],
-      description: lang === "en" ? "Chat directly with our 24/7 instant booking & inquiry chatbot." : "Chatbot Telegram keenya wajjin odeeffannoo fi qabsiisuuf haasa'aa.",
-      link: "https://t.me/Seifa95",
+      icon: MessageCircle,
+      title: lang === "en" ? "WhatsApp Direct" : "Waatsaappii Nu Qunnamaa",
+      details: ["+251 911 123 456", "Chat on WhatsApp"],
+      description: lang === "en" ? "Chat directly with our 24/7 instant booking & pilgrimage consultants." : "Tajaajila Umraa fi imalaa hatattamaaf Waatsaappiin nu qunnamaa.",
+      link: "https://wa.me/251911123456?text=Hello%20HIKAYA%2C%20I%20would%20like%20to%20inquire%20about%20your%20services",
     },
     {
       icon: Phone,
@@ -264,7 +264,7 @@ export default function ContactPage() {
         </div>
       </main>
       <Footer />
-      <TelegramButton />
+      <WhatsAppButton />
     </>
   );
 }

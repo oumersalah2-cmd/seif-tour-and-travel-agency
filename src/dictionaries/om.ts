@@ -24,7 +24,7 @@ export const om = {
       quoteFirst: "Gatii dura gaafadhaa — ragaan booda",
       passportCheck: "Paaspoortiin yoo xiqqaate baatii 6 qabaachuu",
       diaspora: "Maatiif biyya alaa irraa kaffaluu",
-      support: "Gargaarsa Telekiraamii sa'aatii 24 (@Seifa95)",
+      support: "Gargaarsa Waatsaappii sa'aatii 24 (+251 911 123 456)",
     }
   },
   trustPillars: {
@@ -150,8 +150,8 @@ export const om = {
       },
       {
         step: "04",
-        title: "Qophii Imalaa fi Garee Telekiraamii",
-        desc: "Viizaa, tikeettii fi nagahee hoteelaa simadhaa. Qajeelfama duraa argachuun garee Telekiraamii sa'aatii 24 (@Seifa95) seenadha."
+        title: "Qophii Imalaa fi Garee Waatsaappii",
+        desc: "Viizaa, tikeettii fi nagahee hoteelaa simadhaa. Qajeelfama duraa argachuun garee Waatsaappii sa'aatii 24 (+251 911 123 456) seenadha."
       }
     ]
   },
@@ -193,10 +193,10 @@ export const om = {
     benefits: [
       "Kaffaltii amansiisaa doolaara, yuuroo ykn birriin kaffalamu danda'u",
       "Gareen Finfinnee maatii keessan mana isaanii dhufee ragaa qindeessuuf gargaarsa godha",
-      "Odeeffannoo fi suuraalee imalaa Telekiraamiin yeroo yeroon isiniif ergama",
+      "Odeeffannoo fi suuraalee imalaa Waatsaappiin yeroo yeroon isiniif ergama",
       "Qajeelchitoota maanguddoota simatanii Makkaa fi Madiinaatti kunuunsan"
     ],
-    ctaTelegram: "Telekiraamiin Nu Qunnamaa (@Seifa95)",
+    ctaWhatsApp: "Waatsaappiin Nu Qunnamaa (+251 911 123 456)",
     ctaQuote: "Gatii Diyaaspooraa Gaafadhaa",
   },
   officeDesk: {
@@ -205,7 +205,7 @@ export const om = {
     subtitle: "Waajjira keenya daandii Boolee Finfinneetti dhuftanii qajeelfama, kaffaltii fi galmee keessan iftoominaan xumuraa.",
     address: "Daandii Boolee, Finfinnee, Itoophiyaa",
     hours: "Wiixata – Sanbata: 2:30 Ganama – 12:30 Galgala",
-    phone: "+251 900 000 000 / Telegram @Seifa95",
+    phone: "+251 911 123 456 / +251 116 123 456",
   },
   services: {
     subtitle: "Kaanya Kan Irratti Xiyyeefannu",
@@ -301,7 +301,7 @@ export const om = {
     emailLabel: "Teessoo Iimeelii *",
     emailPlaceholder: "ahmad@example.com",
     phoneLabel: "Lakk. Bilbilaa",
-    phonePlaceholder: "+251 900 000 000",
+    phonePlaceholder: "+251 911 123 456",
     subjectLabel: "Dhimma *",
     subjectPlaceholder: "fkn. Pakeejii Umaraa / Daawwannaa Soof Omer / Tikeettii Xiyyaaraa",
     messageLabel: "Ergaa Keessan *",

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, MapPin, Clock, Phone, Send, ShieldCheck, ArrowRight } from "lucide-react";
+import { Building2, MapPin, Clock, Phone, MessageCircle, ShieldCheck, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -57,13 +57,13 @@ export default function OfficeDeskSection() {
 
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href="https://t.me/Seifa95"
+                  href="https://wa.me/251911123456?text=Hello%20HIKAYA%2C%20I%20would%20like%20to%20inquire%20about%20your%20services"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary px-6 py-3.5 text-sm flex items-center gap-2"
                 >
-                  <Send className="w-4 h-4" />
-                  <span>{lang === "en" ? "Chat on Telegram (@Seifa95)" : "Telekiraamiin Nu Qunnamaa (@Seifa95)"}</span>
+                  <MessageCircle className="w-4 h-4 text-white" />
+                  <span>{lang === "en" ? "Chat on WhatsApp (+251 911 123 456)" : "Waatsaappiin Nu Qunnamaa (+251 911 123 456)"}</span>
                 </a>
 
                 <Link
@@ -97,12 +97,17 @@ export default function OfficeDeskSection() {
                   {lang === "en" ? "Direct Pilgrimage Hotline" : "Lakk. Bilbila Hatattamaa"}
                 </span>
                 <div className="text-lg font-bold text-primary-700 dark:text-white">
-                  +251 900 000 000
+                  +251 911 123 456 / +251 116 123 456
                 </div>
                 <span className="text-xs text-gray-500 dark:text-gray-400 mt-1 block">
-                  {lang === "en" ? "Or chat anytime with our Telegram desk:" : "Ykn Telekiraamiin nu qunnamaa:"}{" "}
-                  <a href="https://t.me/Seifa95" className="text-accent-500 font-semibold underline">
-                    t.me/Seifa95
+                  {lang === "en" ? "Or chat anytime on WhatsApp:" : "Ykn Waatsaappiin nu qunnamaa:"}{" "}
+                  <a
+                    href="https://wa.me/251911123456"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-600 dark:text-emerald-400 font-semibold underline"
+                  >
+                    +251 911 123 456
                   </a>
                 </span>
               </div>
