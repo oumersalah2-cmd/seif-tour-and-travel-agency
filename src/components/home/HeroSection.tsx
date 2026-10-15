@@ -71,9 +71,28 @@ export default function HeroSection() {
           {t.hero.subtitle}
         </motion.p>
 
-        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.9 }} className="flex flex-col sm:flex-row gap-4">
+        <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.9 }} className="flex flex-col sm:flex-row gap-4 mb-8">
           <Link href={`/${lang}/#packages`} className="btn-primary text-base px-10 py-4">{t.hero.explore}</Link>
           <Link href={`/${lang}/contact`} className="btn-secondary text-base px-10 py-4">{t.hero.contact}</Link>
+        </motion.div>
+
+        {/* Zad-style Trust Badges Pill Bar */}
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.0 }} className="flex flex-wrap items-center justify-center gap-2 max-w-4xl">
+          <span className="px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
+            📍 {t.hero.pills.route}
+          </span>
+          <span className="px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
+            📋 {t.hero.pills.quoteFirst}
+          </span>
+          <span className="px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
+            🛡 {t.hero.pills.passportCheck}
+          </span>
+          <span className="px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white text-xs font-medium">
+            🌍 {t.hero.pills.diaspora}
+          </span>
+          <a href="https://t.me/Seifa95" target="_blank" rel="noopener noreferrer" className="px-3.5 py-1.5 rounded-full bg-accent-400/30 hover:bg-accent-400/50 backdrop-blur-md border border-accent-400/40 text-accent-300 text-xs font-medium transition">
+            ✈ {t.hero.pills.support}
+          </a>
         </motion.div>
 
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }} className="flex gap-2 mt-12">

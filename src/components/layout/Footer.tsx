@@ -8,19 +8,21 @@ import { useLanguage } from "@/context/LanguageContext";
 const getQuickLinks = (lang: string) => [
   { href: `/${lang}/#home`, label: lang === "en" ? "Home" : "Manni" },
   { href: `/${lang}/#services`, label: lang === "en" ? "Services" : "Tajaajila" },
-  { href: `/${lang}/#packages`, label: lang === "en" ? "Tour Packages" : "Paakeejota Daawwannaa" },
+  { href: `/${lang}/#packages`, label: lang === "en" ? "Packages & Pricing" : "Paakeejota & Gatii" },
+  { href: `/${lang}/#schedule`, label: lang === "en" ? "11-Day Schedule" : "Sagantaa Guyyaa 11" },
+  { href: `/${lang}/#ziyarat`, label: lang === "en" ? "Sacred Ziyarat" : "Ziyaaraa Seenaa" },
+  { href: `/${lang}/#diaspora`, label: lang === "en" ? "Diaspora Sponsorship" : "Kaffaltii Alaa (Diyaaspooraa)" },
   { href: `/${lang}/#destinations`, label: lang === "en" ? "Destinations" : "Bakkeewwan" },
-  { href: `/${lang}/#testimonials`, label: lang === "en" ? "Testimonials" : "Yaada" },
   { href: `/${lang}/contact`, label: lang === "en" ? "Contact Us" : "Nu Qunnamaa" },
 ];
 
 const getServiceLinks = (lang: string) => [
-  lang === "en" ? "International Flights" : "Xiyyaara Addunyaa",
-  lang === "en" ? "Tour Packages" : "Paakeejota Daawwannaa",
-  lang === "en" ? "Visa Assistance" : "Gargaarsa Viizaa",
-  lang === "en" ? "Hotel Reservations" : "Hoteela Qabsiisuu",
-  lang === "en" ? "Travel Insurance" : "Inshuraansii Imalaa",
-  lang === "en" ? "Custom Planning" : "Karoora Dhuunfaa",
+  lang === "en" ? "Umrah Packages (Makkah & Medina)" : "Pakeejii Umaraa ((Makkah, Madiina))",
+  lang === "en" ? "International Flight Tickets" : "Tikeettii Idil-Addunyaa",
+  lang === "en" ? "Domestic Flight Tickets" : "Tikeettii Biyya Keessaa",
+  lang === "en" ? "Hotel Booking (Haram & Worldwide)" : "Hoteelota Haram & Addunyaa",
+  lang === "en" ? "Sof Omar Caves Expedition" : "Daawwannaa Holqa Soof Umar",
+  lang === "en" ? "Wonchi, Bale, Semien & Afar Tours" : "Daawwannaa Wonchii, Baalee, Saameen & Affaar",
 ];
 
 const socialLinks = [
