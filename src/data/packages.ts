@@ -15,106 +15,111 @@ export interface Package {
 
 export const getPackages = (lang: "en" | "om"): Package[] => [
   {
-    id: "hajj-premium",
-    title: lang === "en" ? "Premium Hajj Package" : "Paakeejii Hajjii Filatamaa",
-    destination: lang === "en" ? "Mecca & Medina, Saudi Arabia" : "Makkaa fi Madiinaa, Saawud Arabiyaa",
-    duration: lang === "en" ? "14 Days / 13 Nights" : "Guyyaa 14 / Halkan 13",
-    price: 5999,
+    id: "umrah-makkah-medina",
+    title: lang === "en" ? "Executive Umrah & Historical Ziyarah" : "Pakeejii Umaraa ((Makkah, Madiina fi daawwannaa))",
+    destination: lang === "en" ? "Makkah & Medina, Saudi Arabia" : "Makkaa fi Madiinaa, Saawud Arabiyaa",
+    duration: lang === "en" ? "12 Days / 11 Nights" : "Guyyaa 12 / Halkan 11",
+    price: 1850,
+    originalPrice: 2150,
     rating: 5.0,
-    reviews: 428,
+    reviews: 640,
     description: lang === "en" 
-      ? "Our flagship Hajj package with VIP services. Experience the most profound spiritual journey of your lifetime with premium accommodations near the Haram, dedicated guides, and seamless logistics."
-      : "Paakeejii Hajjii keenya muummee tajaajila VIP waliin. Bakka bultii sadarkaa olaanaa Haramatti dhihoo ta'e, qajeelchitoota addaa fi haala mijataa ta'een muuxannoo imalaa hafuuraa jireenya keessanii isa guddaa argadhaa.",
-    image: "https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?w=800&q=80",
+      ? "Experience a sublime spiritual journey. Includes 5-star hotel near the Haram in Makkah & Medina, visa processing, luxury air-conditioned transport, and complete historical Ziyarah tours (Ghar Hira, Mount Uhud, Masjid Quba)."
+      : "Imala hafuuraa addaa nu wajjin dabarsaa. Hoteela urjii 5 Haramatti dhihoo Makkaa fi Madiinaa, viizaa saffisaa, geejjiba qabbaneessaa qabu, fi daawwannaa/ziyaaraa iddoowwan seena-qabeeyyii hunda of keessatti qabata.",
+    image: "/images/destinations/umrah-makkah.jpg",
     highlights: lang === "en"
-      ? ["VIP Tents in Mina", "5-Star Hotels near Haram", "Dedicated Islamic Scholars", "All-inclusive Meals"]
-      : ["Dunkaana VIP Miinaatti", "Hoteelota Urjii 5 Haramatti dhihoo", "Beektota Islaamaa Addaa", "Nyaata Guutuu"],
+      ? ["5-Star Hotel Steps from Haram", "Complete Historical Ziyarah Tours", "Fast Umrah Visa Approval", "Dedicated Spiritual Guide"]
+      : ["Hoteela Urjii 5 Haramatti Dhihoo", "Ziyaaraa Iddoowwan Seenaa Guutuu", "Viizaa Umraa Ariitii", "Qajeelchaa Amantii Addaa"],
     featured: true,
   },
   {
-    id: "umrah-executive",
-    title: lang === "en" ? "Executive Umrah Package" : "Paakeejii Umrah Olaanaa",
-    destination: lang === "en" ? "Mecca & Medina, Saudi Arabia" : "Makkaa fi Madiinaa, Saawud Arabiyaa",
-    duration: lang === "en" ? "10 Days / 9 Nights" : "Guyyaa 10 / Halkan 9",
-    price: 1899,
-    originalPrice: 2199,
-    rating: 4.9,
-    reviews: 856,
-    description: lang === "en"
-      ? "Perform your Umrah with peace of mind. We handle your visa, flights, and luxury stays, providing an effortless and deeply spiritual experience."
-      : "Umrah keessan nagaan raawwadhaa. Viizaa, xiyyaaraa fi bultii mijataa isiniif haala mijeessina, muuxannoo hafuuraa salphaa fi gadifagoo isiniif dhiyeessina.",
-    image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&q=80",
-    highlights: lang === "en"
-      ? ["Umrah Visa Processing", "Luxury Transport", "Guided Ziyarat", "Zamzam Water Provided"]
-      : ["Viizaa Umrah Hojjechuu", "Geejjiba Mijataa", "Ziyaaraa Qajeelchitoonni Geggeessan", "Bishaan Zamzam"],
-    featured: true,
-  },
-  {
-    id: "dubai-tour",
-    title: lang === "en" ? "Dubai Luxury Tour" : "Daawwannaa Dubaay Sadarkaa Olaanaa",
-    destination: lang === "en" ? "Dubai, UAE" : "Dubaay, UAE",
-    duration: lang === "en" ? "5 Days / 4 Nights" : "Guyyaa 5 / Halkan 4",
-    price: 1299,
-    originalPrice: 1599,
-    rating: 4.8,
-    reviews: 234,
-    description: lang === "en"
-      ? "Experience the glamour of Dubai — from the towering Burj Khalifa to desert safaris and luxury shopping in the UAE's most vibrant city."
-      : "Bareedina Dubaay muuxadhaa — gamoo dheeraa Burj Khalifa irraa kaasee hanga saafaarii gammoojjii fi bittaa qaalii magaalaa UAE ishee saffisattitti.",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
-    highlights: lang === "en"
-      ? ["Burj Khalifa Visit", "Desert Safari", "Dubai Mall", "Marina Cruise"]
-      : ["Burj Khalifa Daawwachuu", "Saafaarii Gammoojjii", "Dubai Mall", "Marina Cruise"],
-    featured: true,
-  },
-  {
-    id: "turkey-tour",
-    title: lang === "en" ? "Turkey Cultural Tour" : "Daawwannaa Aadaa Tarkii",
-    destination: lang === "en" ? "Istanbul & Cappadocia" : "Istanbuul fi Kaappadooshiyaa",
-    duration: lang === "en" ? "7 Days / 6 Nights" : "Guyyaa 7 / Halkan 6",
-    price: 1499,
-    originalPrice: 1899,
-    rating: 4.9,
-    reviews: 189,
-    description: lang === "en"
-      ? "Discover the magic of Turkey — explore historic Istanbul, fly over Cappadocia in hot air balloons, and savor world-renowned Turkish cuisine."
-      : "Dinqisiisaa Tarkii daawwadhaa — Istanbuul seena qabeettii sakatta'aa, Kaappadooshiyaa irra baaluuniin balali'aa, fi nyaata Tarkii beekamaa ta'e dhandhamaa.",
-    image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=800&q=80",
-    highlights: lang === "en"
-      ? ["Hagia Sophia", "Hot Air Balloon", "Grand Bazaar", "Bosphorus Cruise"]
-      : ["Hagia Sophia", "Balali'iinsa Baaluunii", "Grand Bazaar", "Bosphorus Cruise"],
-    featured: true,
-  },
-  {
-    id: "kuwait-discovery",
-    title: lang === "en" ? "Kuwait Discovery" : "Daawwannaa Kuwaat",
-    destination: lang === "en" ? "Kuwait City, Kuwait" : "Kuwaat Siitii, Kuwaat",
+    id: "sof-omar-bale",
+    title: lang === "en" ? "Sof Omar Caves & Bale Mountains Expedition" : "Daawwannaa Holqa Soof Umar fi Gaarren Baalee",
+    destination: lang === "en" ? "Bale, Oromia, Ethiopia" : "Baalee, Oromiyaa, Itoophiyaa",
     duration: lang === "en" ? "4 Days / 3 Nights" : "Guyyaa 4 / Halkan 3",
-    price: 999,
-    rating: 4.7,
-    reviews: 112,
+    price: 480,
+    originalPrice: 590,
+    rating: 4.9,
+    reviews: 312,
     description: lang === "en"
-      ? "Explore the modern marvels and rich history of Kuwait. Visit the iconic Kuwait Towers, traditional souks, and beautiful waterfronts."
-      : "Dinqisiisaa ammayyaa fi seenaa badhaadhaa Kuwaat qoradhaa. Godambaa Kuwaat beekamoo, suuqii aadaa, fi qarqara galaanaa babbareedoo daawwadhaa.",
-    image: "https://images.unsplash.com/photo-1567074994308-df304d5611db?w=800&q=80",
+      ? "Explore Africa's most breathtaking underground cave system at Sof Omar carved by the Weyib River, combined with the alpine beauty of Bale Mountains National Park and endemic wildlife."
+      : "Holqa Soof Umar isa dinqisiisaa Laga Wayibiin tolfame daawwadhaa. Akkasumas qilleensa qabbanaawaa Gaarren Baalee, Sanettii, fi Jeedala Booramee argaa.",
+    image: "/images/destinations/sof-omar.jpg",
     highlights: lang === "en"
-      ? ["Kuwait Towers", "Souq Al Mubarakiya", "Grand Mosque", "Avenues Mall"]
-      : ["Godambaa Kuwaat", "Souq Al Mubarakiya", "Masjiida Guddaa", "Avenues Mall"],
+      ? ["Cathedral Limestone Caves", "Weyib River Walk", "Sanetti Alpine Plateau", "Bale Eco Lodge Accommodation"]
+      : ["Holqa Dhagaa Cimmeessaa Dinqii", "Daandii Laga Wayib", "Platowii Sanettii", "Loojii Uumamaa Baalee"],
+    featured: true,
   },
   {
-    id: "qatar-getaway",
-    title: lang === "en" ? "Qatar Premium Experience" : "Muuxannoo Qaataar Addaa",
-    destination: lang === "en" ? "Doha, Qatar" : "Dohaa, Qaataar",
-    duration: lang === "en" ? "5 Days / 4 Nights" : "Guyyaa 5 / Halkan 4",
-    price: 1199,
-    rating: 4.8,
-    reviews: 145,
+    id: "wonchi-crater-lake",
+    title: lang === "en" ? "Wonchi Crater Lake Paradise Getaway" : "Daawwannaa Haroo Wonchii Hawwataa",
+    destination: lang === "en" ? "Wonchi, Oromia, Ethiopia" : "Wonchii, Oromiyaa, Itoophiyaa",
+    duration: lang === "en" ? "2 Days / 1 Night" : "Guyyaa 2 / Halkan 1",
+    price: 190,
+    originalPrice: 240,
+    rating: 4.9,
+    reviews: 428,
     description: lang === "en"
-      ? "Experience the luxury and culture of Qatar. Stroll through Souq Waqif, marvel at Islamic art, and relax by the Arabian Gulf."
-      : "Qaalummaa fi aadaa Qaataar muuxadhaa. Souq Waqif keessa naanna'aa, aartii Islaamaatti dinqisiifadhaa, fi qarqara Arabian Gulf itti boqodhaa.",
-    image: "https://images.unsplash.com/photo-1700901742651-6b353164caf3?w=800&q=80",
+      ? "Immerse yourself in the emerald waters and lush amphitheater of Wonchi Crater Lake. Enjoy scenic boat rides to the island church, horseback trekking down the caldera, and soothing mineral hot springs."
+      : "Haroo Wonchii isa bareedina uumamaan badhaadhe daawwadhaa. Doonidhaan haroo irra deemuu, farda yaabbachuu, fi burqituu ho'aa dhandhamuudhaan boqonnaa gaarii dabarsaa.",
+    image: "/images/destinations/wonchi.jpg",
     highlights: lang === "en"
-      ? ["Souq Waqif", "Museum of Islamic Art", "Pearl-Qatar", "Desert Safari"]
-      : ["Souq Waqif", "Godambaa Aartii Islaamaa", "Pearl-Qatar", "Saafaarii Gammoojjii"],
+      ? ["Scenic Boat Ride to Island", "Caldera Horseback Riding", "Natural Hot Springs", "Stunning Mountain Views"]
+      : ["Imala Doonii Gara Odolaatti", "Farda Yaabbatanii Bu'uu", "Burqituu Ho'aa Uumamaa", "Mul'ata Gaarren Biyya Keessaa"],
+    featured: true,
+  },
+  {
+    id: "semien-mountains-samen",
+    title: lang === "en" ? "Semien Mountains (Samen Terara) Peak Trek" : "Daawwannaa Gaarren Saameen (Samen Terara)",
+    destination: lang === "en" ? "Semien Mountains, Ethiopia" : "Gaarren Saameen, Itoophiyaa",
+    duration: lang === "en" ? "5 Days / 4 Nights" : "Guyyaa 5 / Halkan 4",
+    price: 650,
+    originalPrice: 780,
+    rating: 4.9,
+    reviews: 215,
+    description: lang === "en"
+      ? "Trek across the 'Roof of Africa' with dramatic escarpments, deep chasms, and views near Ras Dashen. Encounter wild troops of Gelada baboons and Walia ibex in their natural UNESCO habitat."
+      : "Fiixee Gaarren Saameen (Samen Terara) daawwadhaa. Qarqara qileewwan gadi fageenyi isaanii sodaachisaa ta'an, Jaldeessa Giiladaa, fi bineensota alagaa UNESCOn eegaman daawwadhaa.",
+    image: "/images/destinations/semien-mountains.jpg",
+    highlights: lang === "en"
+      ? ["UNESCO World Heritage Escarpments", "Gelada Baboon Encounters", "Camp Under Alpine Skies", "Professional Mountain Guides"]
+      : ["Iddoo Dhaala Addunyaa UNESCO", "Jaldeessa Giiladaa Daawwachuu", "Buufata Gaarren Keessaa", "Qajeelchitoota Gaaraa Ogeeyyii"],
+    featured: true,
+  },
+  {
+    id: "gammoojji-affaar-danakil",
+    title: lang === "en" ? "Afar Depression & Erta Ale Volcano Expedition" : "Imala Gammoojjii Affaar fi Erta Ale",
+    destination: lang === "en" ? "Danakil, Afar, Ethiopia" : "Dallol fi Erta Ale, Affaar",
+    duration: lang === "en" ? "4 Days / 3 Nights" : "Guyyaa 4 / Halkan 3",
+    price: 690,
+    originalPrice: 850,
+    rating: 4.8,
+    reviews: 180,
+    description: lang === "en"
+      ? "Journey into one of the most surreal landscapes on Earth in the Afar depression. Witness the boiling lava lake of active volcano Erta Ale, the kaleidoscopic neon sulfur springs of Dallol, and salt desert flats."
+      : "Gammoojjii Affaar iddoo addunyaa irraa adda ta'e daawwadhaa. Volkaanoo Erta Ale isa abidda bilcheessu, burqaa ashaboo fi salfarii Dallol isa bifa adda addaan miidhage, fi lafa soogiddaa daawwadhaa.",
+    image: "/images/destinations/afar-danakil.jpg",
+    highlights: lang === "en"
+      ? ["Erta Ale Active Volcano Lava Lake", "Dallol Psychedelic Sulfur Springs", "Lake Karum Salt Desert", "Escorted 4x4 Desert Expedition"]
+      : ["Galaana Abiddaa Erta Ale", "Burqaa Salfarii Dallol", "Lafa Soogiddaa Kaarum", "Konkolaattota 4x4 Ammayyaa"],
+    featured: true,
+  },
+  {
+    id: "international-flight-hotel-package",
+    title: lang === "en" ? "International Flights & 5-Star Hotel Booking" : "Tikeettii Xiyyaaraa & Hoteela Idil-Addunyaa",
+    destination: lang === "en" ? "Global Destinations & Middle East" : "Baha Giddugaleessaa fi Addunyaa Hundaa",
+    duration: lang === "en" ? "Custom Duration" : "Akka Fedhii Keessaniitti",
+    price: 920,
+    rating: 4.9,
+    reviews: 520,
+    description: lang === "en"
+      ? "Take advantage of HIKAYA's exclusive corporate airfares and hotel connections. Book your international and domestic flight tickets alongside luxury hotel reservations anywhere in the world."
+      : "Qophii tikeettii xiyyaaraa idil-addunyaa fi biyya keessaa, akkasumas hoteelota sadarkaa olaanaa gatii salphaa fi amansiisaa ta'een HIKAYA waliin qabsiisaa.",
+    image: "/images/destinations/medina-ziyarah.jpg",
+    highlights: lang === "en"
+      ? ["Best Airfare Guarantee", "Worldwide Luxury Hotels", "24/7 Ticketing Support", "Flexible Dates & Changes"]
+      : ["Gatii Tikeettii Isa Gaarii", "Hoteelota Qulqullina Olaanaa", "Gargaarsa Sa'aatii 24", "Jijjiirraa Guyyaa Salphaa"],
+    featured: true,
   },
 ];
+

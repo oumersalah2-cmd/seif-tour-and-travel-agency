@@ -25,7 +25,7 @@ export default function Testimonials() {
         <SectionHeading
           subtitle={lang === "en" ? "Testimonials" : "Yaada Maamiltootaa"}
           title={lang === "en" ? "What Our Travelers Say" : "Imaltoonni Keenya Maal Jedhu"}
-          description={lang === "en" ? "Don't just take our word for it. Read about the unforgettable experiences our clients have had with Seif Tour and Travel Agency." : "Hasaa keenya qofa hin amaniinaa. Muuxannoo dagatamuun hin danda'amne maamiltoonni keenya Seif Tour wajjin qaban dubbisaa."}
+          description={lang === "en" ? "Don't just take our word for it. Read about the unforgettable experiences our clients have had with HIKAYA Tour and Travel Agency." : "Hasaa keenya qofa hin amaniinaa. Muuxannoo dagatamuun hin danda'amne maamiltoonni keenya HIKAYA Tour wajjin qaban dubbisaa."}
         />
 
         <div className="max-w-4xl mx-auto mt-12 relative">

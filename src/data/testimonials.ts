@@ -8,7 +8,35 @@ export interface Testimonial {
 }
 
 export const getTestimonials = (lang: "en" | "om"): Testimonial[] => [
-  { id: "t1", name: "Sh. Habib Hussen", role: lang === "en" ? "Umrah Pilgrim" : "Imalaa Umrah", avatar: "/images/habib.jpg", rating: 5, quote: lang === "en" ? "Seif Tour made my spiritual journey to Mecca seamless. Their attention to detail, VIP tents, and dedicated support allowed me to focus entirely on my Umrah." : "Seif Tour imala hafuuraa koo gara Makkaatti baay'ee salphaa taasise. Sirreeffamni isaanii, dunkaanni VIP, fi gargaarsi isaanii Umrah koo qofa irratti akkan xiyyeeffadhu na gargaare." },
-  { id: "t2", name: "Abdulhakim Abda", role: lang === "en" ? "Family Vacation" : "Boqonnaa Maatii", avatar: "/images/abdulhakim.jpg", rating: 5, quote: lang === "en" ? "Our family trip to Turkey and Dubai was absolutely incredible. Everything was perfectly organized — hotels, tours, and transfers. The kids loved every moment!" : "Imalli maatii keenyaa gara Tarkii fi Dubaay baay'ee ajaa'ibaa ture. Wanti hundinuu sirriitti qophaa'ee ture — hoteelota, daawwannaa fi geejjiba. Ijoolleen baay'ee itti gammadaniiru!" },
-  { id: "t3", name: "Seifadin Ibrahim", role: lang === "en" ? "Business Traveler" : "Imalaa Daldalaa", avatar: "/images/seifadin.jpg", rating: 5, quote: lang === "en" ? "Securing my employment visa for Saudi Arabia was incredibly fast and hassle-free thanks to their expert team. I highly recommend them for all Middle East travel needs." : "Viizaa hojii koo Saawud Arabiyaatiif baay'ee dafee fi rakkoo tokko malee akkan argadhu waan taasisaniif galatoomaa. Dhimma imala Baha Giddugaleessaa hundumaaf isaanin isiniif gorsa." },
+  { 
+    id: "t1", 
+    name: "Sh. Habib Hussen", 
+    role: lang === "en" ? "Umrah Pilgrim" : "Imalaa Umraa", 
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80", 
+    rating: 5, 
+    quote: lang === "en" 
+      ? "HIKAYA Tour made my spiritual journey to Mecca and Medina unforgettable. Their attention to detail, 5-star hotel steps from the Haram, and guided Ziyarah allowed me to focus purely on devotion." 
+      : "HIKAYA Tour imala hafuuraa koo gara Makkaa fi Madiinaatti baay'ee salphaa fi eebbifamaa taasise. Hoteelli Haramatti dhihoo ta'uu fi qajeelfamni ziyaaraa isaanii baay'ee na gammachiise." 
+  },
+  { 
+    id: "t2", 
+    name: "Tolasaa & Ifrah", 
+    role: lang === "en" ? "Eco-Tour Traveler" : "Imaltoota Daawwannaa", 
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&q=80", 
+    rating: 5, 
+    quote: lang === "en" 
+      ? "Our tour to Sof Omar Caves and Wonchi Crater Lake with HIKAYA was mind-blowing! The limestone cathedral caverns and the lake views were stunning, and our 4x4 transport was so comfortable." 
+      : "Daawwannaan Holqa Soof Umar fi Haroo Wonchii HIKAYA wajjin taasifne baay'ee nama ajaa'iba! Uumama dinqisiisaa fi geejjiba mijataa nuuf qopheessaniiru. Baay'ee galatoomaa!" 
+  },
+  { 
+    id: "t3", 
+    name: "Dr. Fuad Kedir", 
+    role: lang === "en" ? "Frequent Traveler" : "Imalaa Daldalaa", 
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80", 
+    rating: 5, 
+    quote: lang === "en" 
+      ? "For domestic and international flight ticketing, HIKAYA is unmatched. They handled our multi-city flights and hotel reservations smoothly with best fares and 24/7 responsiveness." 
+      : "Tikeettii xiyyaaraa biyya keessaa fi idil-addunyaa qabsiisuuf HIKAYA qofti ga'aadha. Gatii gaarii, ariitii, fi hoteela mijataa nuuf qabsiisaniiru. Yeroo hunda isaanin filadha." 
+  },
 ];
+

@@ -1,17 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HIKAYA Tour and Travel Agency ✈️
+
+Official website for **HIKAYA Tour and Travel Agency** — offering:
+- **Pakeejii Umaraa / Umrah Packages** ((Makkah, Madiina fi daawwannaa))
+- **International Flight Tickets** (Tikeettii Idil-addunyaa)
+- **Domestic Flight Tickets** (Tikeettii Biyya Keessaa)
+- **International Hotel Booking** (Hoteelota Idil-addunyaa)
+- **Domestic Hotel Booking** (Hoteelota Biyya Keessaa)
+- **Ethiopia Tours**:
+  - Holqa Soof Umar (Sof Omar Caves)
+  - Haroo Wonchii (Wonchi Crater Lake)
+  - Gaarren Baalee (Bale Mountains)
+  - Gaarren Saameen (Semien Mountains / Samen Terara)
+  - Gammoojjii Affaar (Afar Depression - Dallol & Erta Ale)
+  - fi kkkf (and more)
 
 ## Getting Started
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

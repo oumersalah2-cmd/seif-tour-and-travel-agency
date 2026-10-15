@@ -8,73 +8,77 @@ export const om = {
     contact: "Nu Quunnamaa",
   },
   hero: {
-    welcome: "✈ Baga nagaan gara Seif Tour and Travel Agency dhuftan",
-    titleStart: "Karra Keessan Gara ",
-    titleHighlight: "Muuxannoo Imalaa",
-    titleEnd: " Adda Ta'eetti",
-    subtitle: "Imala hafuuraa Hajjii fi Umrah eegalaa, bakkeewwan Baha Giddugaleessaa hawwatoo ta'an daawwadhaa, akkasumas gargaarsa ogeeyyii keenyaan viizaa hojii ariitiin argadhaa.",
+    welcome: "✈ Baga nagaan gara HIKAYA Tour and Travel Agency dhuftan",
+    titleStart: "Imala Keessan, ",
+    titleHighlight: "Seenaa (Hikaya)",
+    titleEnd: " fi Yeroo Eebbifamaa",
+    subtitle: "Pakeejii Umaraa ((Makkah, Madiina fi daawwannaa)), Tikeettii Idil-addunyaa, Tikeettii Biyya Keessaa, Hoteela Idil-addunyaa fi Biyya Keessaa qabsiisuu, akkasumas daawwannaa Soof Omer, Wonchi, Gaarren Baalee, Gaarren Saameen, fi Gammoojjii Affaar.",
     explore: "Paakeejota Daawwadhaa",
     contact: "Nu Quunnamaa",
     scroll: "Gadi Siqsi",
   },
   services: {
-    subtitle: "Maal Akka Dhiyeessinu",
+    subtitle: "Kaanya Kan Irratti Xiyyeefannu",
     title: "Tajaajiloota Imalaa Qulqullina Olaanaa",
-    description: "Imala amantii irraa kaasee hanga viizaa hojii ariitiitti, wanta hundumaa nutu isinif raawwata.",
+    description: "Pakeejii Umaraa irraa kaasee hanga tikeettii xiyyaaraa, hoteelota biyya keessaa fi alaa, akkasumas daawwannaa bakkeewwan seena qabeessaatti.",
     items: {
       umrah: {
-        title: "Paakeejota Umrah fi Hajjii",
-        description: "Tajaajila hajjii guutuu kan dunkaana VIP, qajeelchitoota beekumsa qabaniifi bakka bultii Haramatti dhihoo ta'e of keessatti qabate.",
+        title: "Pakeejii Umaraa ((Makkah, Madiina fi daawwannaa))",
+        description: "Tajaajila Umraa guutuu kan Makkaa, Madiinaa fi ziyaaraa/daawwannaa iddoowwan seena qabeessaa Haramatti dhihoo ta'e.",
       },
-      visa: {
-        title: "Viizaa Hojii Baha Giddugaleessaa",
-        description: "Saawud Arabiyaa, UAE, Kuwaatiifi Qaataariif viizaa hojii haala si'ataa fi amansiisaa ta'een ni hojjenna.",
+      tickets: {
+        title: "Tikeettii Idil-addunyaa fi Biyya Keessaa",
+        description: "Tikeettii balali'iinsa xiyyaaraa biyya keessaa fi addunyaa guutuu gatii madaalawaa fi si'ataan isiniif qabsiisna.",
       },
-      ticketing: {
-        title: "Tikeetii fi Bakka Qabsiisuu",
-        description: "Daandii xiyyaaraa fi hoteelota Baha Giddugaleessaa keessatti gatii addaatiin isiniif qabsiisna.",
+      hotels: {
+        title: "Hoteelota Idil-addunyaa fi Biyya Keessaa",
+        description: "Hoteelota sadarkaa olaanaa Makkaa, Madiinaa fi addunyaa irraa kaasee hanga loojjota Itoophiyaa babbareedootti.",
+      },
+      tours: {
+        title: "Daawwannaa: Soof Omer, Wonchi, Baalee, Saameen, Affaar",
+        description: "Imala daawwannaa dinqisiisaa Holqa Soof Umar, Haroo Wonchii, Gaarren Baalee, Gaarren Saameen, fi Gammoojjii Affaar.",
       },
     }
   },
   whyChooseUs: {
     subtitle: "Faayidaalee Keenya",
-    title: "Maaliif Seif Tour Filattu?",
-    description: "Hajjii, Umrah fi imala Baha Giddugaleessaatiif nuti filannoo keessan isa duraati.",
+    title: "Maaliif HIKAYA Filattu?",
+    description: "Umraa, tikeettii xiyyaaraa, hoteela qabsiisuu fi daawwannaadhaaf nuti filannoo keessan isa duraati.",
     reasons: [
       {
-        title: "Ogeeyyii Hajjii fi Umrah",
-        description: "Beektota addaa, dunkaana VIP, fi bakka bultii sadarkaa olaanaa Haramatti dhihoo ta'e muuxannoo hafuuraatiif."
+        title: "Ogeeyyii Umraa fi Ziyaaraa",
+        description: "Qajeelchitoota beekumsa amantii qaban, hoteelota Haramatti dhihoo Makkaa fi Madiinaa, fi daawwannaa seenaa guutuu."
       },
       {
-        title: "Ogeeyyii Baha Giddugaleessaa",
-        description: "Hariiroo cimaa Saawud Arabiyaa, UAE, Tarkii, Kuwaat, fi Qaataar keessatti qabnuun muuxannoo gaarii isiniif mirkaneessina."
+        title: "Tikeettii Idil-addunyaa & Biyya Keessaa",
+        description: "Balali'iinsa biyya keessaa fi idil-addunyaa kamiyyuu gatii filatamaa fi jijjiirraa salphaa waliin."
       },
       {
-        title: "Tajaajila Dhuunfaa",
-        description: "Karoora imalaa dhuunfaa fedhii, sagantaa, fi baajata keessan irratti hundaa'ee qophaa'u."
+        title: "Daawwannaa Hawwatoo Itoophiyaa",
+        description: "Soof Omer, Wonchi, Gaarren Baalee, Gaarren Saameen (Samen Terara), fi Gammoojjii Affaar daawwachiisuu irratti muuxannoo olaanaa."
       },
       {
         title: "Kaffaltii Amansiisaa",
-        description: "Iccitiin ragaa dhuunfaa keessanii sirna kaffaltii amansiisaa ta'een eegamaadha."
+        description: "Iccitiin ragaa dhuunfaa fi kaffaltiin keessan sirna amansiisaa ta'een eegamaadha."
       },
       {
         title: "Gargaarsa Sa'aatii 24",
-        description: "Imala keessan guutuu gargaarsa sa'aatii 24 isiniif kennina, yaaddoo tokko malee akka imaltan."
+        description: "Imala keessan guutuu fi yeroo Umraa gargaarsa afaan hedduun kennamu sa'aatii 24 argattu."
       },
       {
-        title: "Viizaa Ariitii",
-        description: "Viizaa Umrah, Hajjii, daawwannaa, fi hojii Baha Giddugaleessaa haala si'ataa ta'een rakkoo malee isiniif hojjenna."
+        title: "Viizaa fi Geejjiba Ariitii",
+        description: "Viizaa Umraa fi daawwannaa, tajaajila simannaa buufata xiyyaaraa fi konkolaattota ammayyaa."
       }
     ]
   },
   stats: {
     travelers: "Imaltoota Gammadoo",
-    destinations: "Bakkeewwan",
+    destinations: "Bakkeewwan Filatamoo",
     trips: "Imala Milkaa'aa",
     experience: "Muuxannoo Waggootaa"
   },
   footer: {
-    description: "Muuxannoo imalaa addaa ta'eef hiriyaa amansiisaa keessan. Tajaajila dhuunfaa, gatii madaalamaa, fi gorsa ogeeyyii waliin gara bakkeewwan addunyaa hundatti imala hin dagatamne isiniif qopheessina.",
+    description: "HIKAYA Tour and Travel Agency imala Umraa, tikeettii xiyyaaraa idil-addunyaa fi biyya keessaa, hoteela qabsiisuu, fi daawwannaa bakkeewwan hawwatoo Itoophiyaatiif hiriyaa amansiisaa keessani.",
     quickLinks: "Gara Ariitii",
     ourServices: "Tajaajilawwan Keenya",
     getInTouch: "Nu Qunnamaa",
@@ -89,19 +93,19 @@ export const om = {
   },
   contact: {
     subtitle: "Nu Qunnamaa",
-    title: "Ogeeyyii Imalaa Keenya Qunnamaa",
-    description: "Gaaffii qabdu ykn imala keessan qabsiisuuf qophiidha? Nu qunnamaa, dandeettii ariitiin isiniif deebisna.",
+    title: "Ogeeyyii Imalaa HIKAYA Qunnamaa",
+    description: "Pakeejii Umaraa, tikeettii xiyyaaraa, hoteela, ykn daawwannaa qabsiisuuf nu qunnamaa, ariitiin isiniif deebisna.",
     callUs: "Nuuf Bilbilaa",
     callDesc: "Dhimma hatattamaaf sa'aatii 24 qophiidha.",
     emailUs: "Iimeelii Nuuf Ergaa",
-    emailDesc: "Yeroo barbaaddan nuuf ergaa. Sa'aatii 24 keessatti deebii ni kennina.",
+    emailDesc: "Yeroo barbaaddan nuuf ergaa. Sa'aatii muraasa keessatti deebii ni kennina.",
     visitUs: "Nu Daawwadhaa",
     visitDesc: "Waajjirri keenya Wiixata hanga Sanbataatti banaadha.",
     workingHours: "Sa'aatii Hojii",
     hoursDesc: "Dilbata fi guyyoota ayyaanaa cufaadha.",
     sendMessage: "Ergaa Nuuf Ergaa",
     successTitle: "Ergaan Milkaa'inaan Ergameera!",
-    successDesc: "Nu qunnamuu keessaniif galatoomaa. Ogeeyyiin imalaa keenya yeroo dhiyootti isin quunnamu.",
+    successDesc: "HIKAYA qunnamuu keessaniif galatoomaa. Ogeeyyiin imalaa keenya yeroo dhiyootti isin quunnamu.",
     nameLabel: "Maqaa Guutuu *",
     namePlaceholder: "Maqaa keessan",
     emailLabel: "Teessoo Iimeelii *",
@@ -109,10 +113,11 @@ export const om = {
     phoneLabel: "Lakk. Bilbilaa",
     phonePlaceholder: "+251 900 000 000",
     subjectLabel: "Dhimma *",
-    subjectPlaceholder: "fkn. Gaaffii Daawwannaa Dubaay",
+    subjectPlaceholder: "fkn. Pakeejii Umaraa / Daawwannaa Soof Omer / Tikeettii",
     messageLabel: "Ergaa Keessan *",
     messagePlaceholder: "Karoora imala keessanii nuuf himaa...",
     sending: "Ergamaa Jira...",
     send: "Ergaa Ergi"
   },
 };
+

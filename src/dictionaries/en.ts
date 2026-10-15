@@ -8,69 +8,77 @@ export const en = {
     contact: "Contact Us",
   },
   hero: {
-    welcome: "✈ Welcome to Seif Tour and Travel Agency",
-    titleStart: "Your Gateway To ",
-    titleHighlight: "Extraordinary",
-    titleEnd: " Travel Experiences",
-    subtitle: "Embark on deeply spiritual Hajj & Umrah journeys, discover the Middle East's most breathtaking destinations, and secure rapid employment visas with our expert guidance.",
+    welcome: "✈ Welcome to HIKAYA Tour and Travel Agency",
+    titleStart: "Your Journey, Your ",
+    titleHighlight: "Story (Hikaya)",
+    titleEnd: " & Sacred Moments",
+    subtitle: "Premier Umrah packages (Makkah & Medina with historical Ziyarah), International & Domestic flight tickets, worldwide hotel bookings, and extraordinary eco-tours to Sof Omar, Wonchi, Bale Mountains, Semien, and Afar.",
     explore: "Explore Packages",
     contact: "Contact Us",
     scroll: "Scroll",
   },
   services: {
-    subtitle: "What We Offer",
+    subtitle: "Our Core Focus",
     title: "Premium Travel Services",
-    description: "From deeply spiritual pilgrimages to fast-tracked work visas, we handle every detail so you can focus on your journey.",
+    description: "From deeply spiritual Umrah pilgrimages to domestic & international flight ticketing, hotel reservations, and unforgettable Ethiopia tours.",
     items: {
       umrah: {
-        title: "Umrah & Hajj Packages",
-        description: "Comprehensive pilgrimage services with VIP tents, expert guides, and accommodations steps away from the Haram.",
+        title: "Umrah Packages (Makkah, Medina & Ziyarah)",
+        description: "Comprehensive pilgrimage services with 5-star hotels steps from the Haram, dedicated religious scholars, visa processing, and historical visits.",
       },
-      visa: {
-        title: "Middle East Work Visas",
-        description: "Fast, reliable processing for employment visas in Saudi Arabia, UAE, Kuwait, and Qatar. We handle the paperwork.",
+      tickets: {
+        title: "International & Domestic Flight Tickets",
+        description: "Fast issuance of airline tickets across all domestic Ethiopian routes and worldwide destinations at the most competitive fares.",
+      },
+      hotels: {
+        title: "International & Domestic Hotel Bookings",
+        description: "Curated luxury accommodations, from 5-star holy city stays in Mecca & Medina to premier Ethiopian eco-lodges and resorts.",
+      },
+      tours: {
+        title: "Ethiopian Tours & Eco-Adventures",
+        description: "Guided expeditions to Sof Omar Caves, Wonchi Crater Lake, Bale Mountains, Semien Mountains, and Afar Depression.",
       },
     }
   },
   whyChooseUs: {
     subtitle: "Our Advantages",
-    title: "Why Choose Seif Tour?",
-    description: "We are your premier partner for Hajj, Umrah, and exclusive Middle East travel experiences.",
+    title: "Why Choose HIKAYA?",
+    description: "We are your trusted partner for Umrah, global flight ticketing, hotel reservations, and authentic Ethiopia tours.",
     reasons: [
       {
-        title: "Hajj & Umrah Specialists",
-        description: "Dedicated scholars, VIP tents, and premium accommodations near the Haram for a deeply spiritual journey."
+        title: "Dedicated Umrah Specialists",
+        description: "Guidance by Islamic scholars, accommodations steps away from the Haram in Makkah & Medina, and complete Ziyarah tours."
       },
       {
-        title: "Middle East Experts",
-        description: "Unrivaled connections across Saudi Arabia, UAE, Turkey, Kuwait, and Qatar ensuring the best experiences."
+        title: "Complete Ticketing Solutions",
+        description: "Instant booking and date changes for domestic and international flights with transparent, affordable pricing."
       },
       {
-        title: "Personalized Services",
-        description: "Tailor-made itineraries designed specifically around your preferences, schedule, and budget."
+        title: "Bespoke Ethiopia Tours",
+        description: "Expertly organized expeditions to Sof Omar Caves, Wonchi Crater Lake, Bale Mountains, Semien (Samen Terara), and Afar Depression."
       },
       {
-        title: "Secure Booking",
-        description: "Bank-level encryption and secure payment gateways ensure your personal information is protected."
+        title: "Secure & Trusted Booking",
+        description: "Official travel agency registration, bank-level security, and reliable transactions give you complete peace of mind."
       },
       {
-        title: "24/7 Dedicated Support",
-        description: "Round-the-clock assistance throughout your pilgrimage or tour for complete peace of mind."
+        title: "24/7 Pilgrim & Traveler Support",
+        description: "Round-the-clock multilingual assistance throughout your travels, flight schedules, and sacred pilgrimage."
       },
       {
-        title: "Fast Visa Processing",
-        description: "Expert assistance for rapid Umrah, Hajj, tourist, and Middle East work visa approvals without the usual hassle."
+        title: "Express Visa & Logistics",
+        description: "Quick turnaround for Umrah visas, tourist visas, airport pickups, and private transportation."
       }
     ]
   },
   stats: {
-    travelers: "Happy Travelers",
-    destinations: "Destinations",
+    travelers: "Happy Pilgrims & Travelers",
+    destinations: "Curated Destinations",
     trips: "Successful Trips",
-    experience: "Years Experience"
+    experience: "Years of Excellence"
   },
   footer: {
-    description: "Your trusted partner for extraordinary travel experiences. We craft unforgettable journeys with personalized service, competitive pricing, and expert guidance to destinations worldwide.",
+    description: "HIKAYA Tour and Travel Agency is your premier partner for sacred Umrah journeys, international & domestic ticketing, luxury hotel bookings, and unforgettable tours across Ethiopia.",
     quickLinks: "Quick Links",
     ourServices: "Our Services",
     getInTouch: "Get in Touch",
@@ -85,31 +93,31 @@ export const en = {
   },
   contact: {
     subtitle: "Get In Touch",
-    title: "Contact Our Travel Experts",
-    description: "Have a question or ready to book your next trip? Reach out to us and we'll get back to you as soon as possible.",
+    title: "Contact HIKAYA Travel Experts",
+    description: "Ready to book your Umrah package, flight tickets, hotels, or Ethiopian tours? Reach out to our dedicated team anytime.",
     callUs: "Call Us",
-    callDesc: "We are available 24/7 for urgent inquiries.",
+    callDesc: "We are available 24/7 for booking and inquiries.",
     emailUs: "Email Us",
-    emailDesc: "Drop us a line anytime. We reply within 24 hours.",
+    emailDesc: "Drop us a line anytime. We reply within a few hours.",
     visitUs: "Visit Us",
-    visitDesc: "Our office is open from Monday to Saturday.",
+    visitDesc: "Our office is open Monday to Saturday.",
     workingHours: "Working Hours",
     hoursDesc: "Closed on Sundays and Public Holidays.",
     sendMessage: "Send Us a Message",
     successTitle: "Message Sent Successfully!",
-    successDesc: "Thank you for reaching out. One of our travel experts will contact you shortly.",
+    successDesc: "Thank you for contacting HIKAYA. One of our travel consultants will reach out to you shortly.",
     nameLabel: "Full Name *",
-    namePlaceholder: "John Doe",
+    namePlaceholder: "Ahmad Mohammed",
     emailLabel: "Email Address *",
-    emailPlaceholder: "john@example.com",
+    emailPlaceholder: "ahmad@example.com",
     phoneLabel: "Phone Number",
     phonePlaceholder: "+251 900 000 000",
     subjectLabel: "Subject *",
-    subjectPlaceholder: "e.g. Dubai Tour Inquiry",
+    subjectPlaceholder: "e.g. Umrah Package / Sof Omar Tour / Ticket Booking",
     messageLabel: "Your Message *",
-    messagePlaceholder: "Tell us about your travel plans...",
+    messagePlaceholder: "Tell us about your travel or Umrah plans...",
     sending: "Sending...",
     send: "Send Message"
   },
-  // Add more as needed
 };
+

@@ -10,7 +10,35 @@ export interface BlogPost {
 }
 
 export const getBlogPosts = (lang: "en" | "om"): BlogPost[] => [
-  { id: "umrah-preparation", title: lang === "en" ? "Essential Guide to Preparing for Umrah" : "Qajeelfama Bu'uuraa Qophii Umrah", excerpt: lang === "en" ? "Everything you need to know about preparing for your spiritual journey — from required documents and rituals to what to pack for Mecca and Medina." : "Waan hundumaa imala hafuuraa keessaniif qophaa'uuf beekuu qabdan — ragaalee barbaachisoo fi sirnoota irraa kaasee hanga waan gara Makkaa fi Madiinaatti qabattanitti.", category: lang === "en" ? "Travel Guide" : "Qajeelfama Imalaa", date: lang === "en" ? "May 15, 2025" : "Caamsaa 15, 2025", readTime: lang === "en" ? "8 min read" : "Daqiqa 8 dubbisa", image: "https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?w=800&q=80", author: "Seif Tour Team" },
-  { id: "middle-east-visas", title: lang === "en" ? "Navigating Middle East Work Visas" : "Adeemsa Viizaa Hojii Baha Giddugaleessaa", excerpt: lang === "en" ? "A comprehensive breakdown of the employment visa processes for Saudi Arabia, UAE, and Kuwait. Learn the requirements and how we can fast-track your application." : "Adeemsa viizaa hojii Saawud Arabiyaa, UAE, fi Kuwaat guutummaatti ibsame. Ulaagaalee fi akkamitti iyyannoo keessan akka ariifachiisnu baradhaa.", category: lang === "en" ? "Visa & Legal" : "Viizaa fi Seera", date: lang === "en" ? "May 8, 2025" : "Caamsaa 8, 2025", readTime: lang === "en" ? "6 min read" : "Daqiqa 6 dubbisa", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80", author: "Seif Tour Team" },
-  { id: "dubai-itinerary", title: lang === "en" ? "The Ultimate 5-Day Dubai Itinerary" : "Sagantaa Guyyaa 5 Dubaay", excerpt: lang === "en" ? "Maximize your time in the UAE's most vibrant city. From the Burj Khalifa to hidden cultural gems in Al Fahidi, here is how to spend 5 days in Dubai." : "Yeroo keessan magaalaa UAE saffisattu keessatti guutummaatti fayyadamaa. Burj Khalifa irraa kaasee hanga bakkeewwan aadaa dhokatoo Al Fahidiitti, guyyaa 5 Dubaay keessatti akkamitti akka dabarsitan asitti ibsameera.", category: lang === "en" ? "Destination" : "Bakkeewwan", date: lang === "en" ? "April 28, 2025" : "Ebla 28, 2025", readTime: lang === "en" ? "7 min read" : "Daqiqa 7 dubbisa", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80", author: "Seif Tour Team" },
+  { 
+    id: "umrah-preparation", 
+    title: lang === "en" ? "Essential Guide to Preparing for Umrah & Ziyarah" : "Qajeelfama Bu'uuraa Qophii Umraa fi Ziyaaraa", 
+    excerpt: lang === "en" ? "Everything you need to know about preparing for your spiritual journey to Makkah & Medina — documents, rituals, hotels near Haram, and sacred Ziyarah sites." : "Waan hundumaa imala hafuuraa gara Makkaa fi Madiinaatti qophaa'uuf beekuu qabdan — ragaalee barbaachisoo, sirna amantii, hoteelota Haramatti dhihoo, fi iddoowwan ziyaaraa.", 
+    category: lang === "en" ? "Umrah Guide" : "Qajeelfama Umraa", 
+    date: lang === "en" ? "May 15, 2025" : "Caamsaa 15, 2025", 
+    readTime: lang === "en" ? "8 min read" : "Daqiqa 8 dubbisa", 
+    image: "/images/destinations/umrah-makkah.jpg", 
+    author: "HIKAYA Tour Team" 
+  },
+  { 
+    id: "sof-omar-wonchi-bale", 
+    title: lang === "en" ? "Exploring Sof Omar Caves & Wonchi Crater Lake" : "Daawwannaa Holqa Soof Umar fi Haroo Wonchii", 
+    excerpt: lang === "en" ? "Discover the geological marvels of Ethiopia — from the underground cathedral river caverns of Sof Omar to the serene volcanic caldera of Wonchi." : "Dinqisiisaa uumamaa Itoophiyaa daawwadhaa — holqa dinqii Soof Umar Laga Wayibiin dhangala'u irraa kaasee hanga haroo calaqqisaa Wonchiitti.", 
+    category: lang === "en" ? "Ethiopia Tours" : "Daawwannaa Itoophiyaa", 
+    date: lang === "en" ? "May 8, 2025" : "Caamsaa 8, 2025", 
+    readTime: lang === "en" ? "6 min read" : "Daqiqa 6 dubbisa", 
+    image: "/images/destinations/sof-omar.jpg", 
+    author: "HIKAYA Tour Team" 
+  },
+  { 
+    id: "ticketing-hotel-booking", 
+    title: lang === "en" ? "How to Secure the Best International & Domestic Flights" : "Akkamitti Tikeettii Xiyyaaraa fi Hoteela Gaarii Qabsiisuu Dandeenya", 
+    excerpt: lang === "en" ? "Maximize your travel budget with HIKAYA's expert tips for booking domestic Ethiopian flights, international tickets, and luxury hotel accommodations." : "Tooftaalee HIKAYA fayyadamuun tikeettii xiyyaaraa biyya keessaa fi idil-addunyaa gatii madaalawaan akkamitti akka qabsiistan baradhaa.", 
+    category: lang === "en" ? "Flight & Hotels" : "Xiyyaara fi Hoteela", 
+    date: lang === "en" ? "April 28, 2025" : "Ebla 28, 2025", 
+    readTime: lang === "en" ? "7 min read" : "Daqiqa 7 dubbisa", 
+    image: "/images/destinations/medina-ziyarah.jpg", 
+    author: "HIKAYA Tour Team" 
+  },
 ];
+

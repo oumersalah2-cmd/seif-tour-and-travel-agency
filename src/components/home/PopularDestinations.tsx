@@ -31,61 +31,72 @@ export default function PopularDestinations() {
           </Link>
         </div>
 
-        {/* Masonry/Asymmetric Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 h-auto md:h-[600px]">
-          {/* Large Hero Item */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden group h-[300px] md:h-full cursor-pointer"
-          >
-            <Image
-              src={destinations[0].image}
-              alt={destinations[0].name}
-              fill
-              className="object-cover transition-transform duration-1000 group-hover:scale-110"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6">
-              <span className="px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-white text-xs font-semibold uppercase tracking-wider mb-3 inline-block">
-                {destinations[0].country}
-              </span>
-              <h3 className="font-display font-bold text-3xl text-white mb-2">
-                {destinations[0].name}
-              </h3>
-              <p className="text-gray-200 text-sm">{destinations[0].tours} {lang === "en" ? "Tours Available" : "Daawwannaan Ni Argama"}</p>
-            </div>
-          </motion.div>
-
-          {/* Regular Items */}
-          {destinations.slice(1, 5).map((dest, index) => (
+        {/* Bento Grid displaying all 6 destinations */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Top 2 Featured Large Cards */}
+          {destinations.slice(0, 2).map((dest, index) => (
             <motion.div
               key={dest.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 * (index + 1) }}
-              className="relative rounded-2xl overflow-hidden group h-[250px] md:h-[290px] cursor-pointer"
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="lg:col-span-2 relative rounded-3xl overflow-hidden group h-[320px] sm:h-[360px] cursor-pointer shadow-soft hover:shadow-soft-lg transition-all"
+            >
+              <Image
+                src={dest.image}
+                alt={dest.name}
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6">
+                <span className="px-3.5 py-1 bg-accent-400 text-white rounded-full text-xs font-bold uppercase tracking-wider mb-3 inline-block shadow-sm">
+                  {dest.country}
+                </span>
+                <h3 className="font-display font-bold text-2xl sm:text-3xl text-white mb-2 group-hover:text-accent-300 transition-colors">
+                  {dest.name}
+                </h3>
+                <p className="text-gray-200 text-sm flex items-center justify-between">
+                  <span>{dest.tours} {lang === "en" ? "Tours & Packages Available" : "Daawwannaan Ni Argama"}</span>
+                  <span className="text-accent-300 font-semibold text-xs flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    {lang === "en" ? "Explore" : "Daawwadhaa"} &rarr;
+                  </span>
+                </p>
+              </div>
+            </motion.div>
+          ))}
+
+          {/* 4 Bottom Grid Cards */}
+          {destinations.slice(2, 6).map((dest, index) => (
+            <motion.div
+              key={dest.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 * (index + 2) }}
+              className="relative rounded-3xl overflow-hidden group h-[280px] cursor-pointer shadow-soft hover:shadow-soft-lg transition-all"
             >
               <Image
                 src={dest.image}
                 alt={dest.name}
                 fill
                 className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, 25vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-5 left-5 right-5">
-                <span className="px-2.5 py-0.5 bg-accent-400 rounded-full text-white text-[10px] font-bold uppercase tracking-wider mb-2 inline-block">
+                <span className="px-2.5 py-0.5 bg-white/20 backdrop-blur-md rounded-full text-white text-[10px] font-bold uppercase tracking-wider mb-2 inline-block">
                   {dest.country}
                 </span>
-                <h3 className="font-display font-bold text-xl text-white mb-1">
+                <h3 className="font-display font-bold text-lg sm:text-xl text-white mb-1 group-hover:text-accent-300 transition-colors line-clamp-1">
                   {dest.name}
                 </h3>
-                <p className="text-gray-300 text-xs">{dest.tours} {lang === "en" ? "Tours" : "Daawwannaa"}</p>
+                <p className="text-gray-300 text-xs flex items-center justify-between">
+                  <span>{dest.tours} {lang === "en" ? "Tours" : "Daawwannaa"}</span>
+                  <span className="text-accent-300 text-xs font-semibold group-hover:translate-x-1 transition-transform">&rarr;</span>
+                </p>
               </div>
             </motion.div>
           ))}

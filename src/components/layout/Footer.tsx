@@ -61,7 +61,7 @@ export default function Footer() {
                 <Plane className="w-5 h-5 text-white -rotate-45" />
               </div>
               <div>
-                <span className="text-lg font-display font-bold">Seif Tour</span>
+                <span className="text-lg font-display font-bold">HIKAYA</span>
                 <span className="block text-[10px] uppercase tracking-[0.3em] text-accent-300 -mt-0.5">
                   & Travel Agency
                 </span>
@@ -122,7 +122,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-accent-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">info@seiftour.com</span>
+                <span className="text-gray-300 text-sm">info@hikayatour.com</span>
               </div>
             </div>
 
@@ -150,7 +150,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} Seif Tour and Travel Agency. {t.footer.rights}
+            © {new Date().getFullYear()} HIKAYA Tour and Travel Agency. {t.footer.rights}
           </p>
           <div className="flex gap-6 text-sm text-gray-400">
             <span className="hover:text-accent-300 cursor-pointer transition-colors">{t.footer.privacy}</span>

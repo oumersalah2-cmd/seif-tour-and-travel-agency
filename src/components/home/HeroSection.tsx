@@ -9,9 +9,13 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 const slides = [
-  { image: "https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?w=1600&q=90", alt: "Grand Mosque in Mecca, Saudi Arabia" },
-  { image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=90", alt: "Dubai skyline at night" },
-  { image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=1600&q=90", alt: "Hagia Sophia and Istanbul skyline" },
+  { image: "/images/destinations/umrah-makkah.jpg", alt: "Makkah Al-Mukarramah Umrah Package" },
+  { image: "/images/destinations/sof-omar.jpg", alt: "Sof Omar Caves in Bale, Ethiopia" },
+  { image: "/images/destinations/wonchi.jpg", alt: "Wonchi Crater Lake in Oromia, Ethiopia" },
+  { image: "/images/destinations/bale-mountains.jpg", alt: "Bale Mountains National Park, Ethiopia" },
+  { image: "/images/destinations/semien-mountains.jpg", alt: "Semien Mountains Samen Terara, Ethiopia" },
+  { image: "/images/destinations/afar-danakil.jpg", alt: "Afar Depression Dallol & Erta Ale, Ethiopia" },
+  { image: "/images/destinations/medina-ziyarah.jpg", alt: "Al-Masjid an-Nabawi Medina Ziyarah Tour" },
 ];
 
 export default function HeroSection() {

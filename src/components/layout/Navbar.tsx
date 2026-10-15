@@ -75,7 +75,7 @@ export default function Navbar() {
                   isScrolled || isMobileOpen ? "text-primary-700 dark:text-white" : "text-white"
                 }`}
               >
-                Seif Tour
+                HIKAYA
               </span>
               <span
                 className={`block text-[10px] uppercase tracking-[0.3em] font-medium -mt-0.5 transition-colors duration-300 ${

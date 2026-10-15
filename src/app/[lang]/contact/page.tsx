@@ -47,7 +47,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: t.contact.emailUs,
-      details: ["info@seiftour.com", "support@seiftour.com"],
+      details: ["info@hikayatour.com", "support@hikayatour.com"],
       description: t.contact.emailDesc,
     },
     {

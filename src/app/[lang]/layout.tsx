@@ -16,20 +16,20 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Seif Tour and Travel Agency | Premium Tours & Flights",
-  description: "Discover extraordinary travel experiences with Seif Tour and Travel Agency. We offer international flights, premium tour packages, visa assistance, and custom travel planning.",
-  keywords: "travel agency, tour packages, flights, vacation, holiday, booking, visa assistance",
+  title: "HIKAYA Tour and Travel Agency | Umrah, Flights & Ethiopia Tours",
+  description: "Experience sacred Umrah pilgrimages (Makkah & Medina), Domestic & International flight tickets, luxury hotel bookings, and extraordinary tours across Ethiopia (Sof Omar, Wonchi, Bale Mountains, Semien, Afar).",
+  keywords: "HIKAYA travel agency, Umrah packages, Sof Omar caves, Wonchi crater lake, Bale mountains, Semien mountains, Afar Danakil, domestic flight tickets, international flights, Ethiopia tours",
   openGraph: {
-    title: "Seif Tour and Travel Agency",
-    description: "Your gateway to extraordinary travel experiences.",
-    url: "https://seiftour.com",
-    siteName: "Seif Tour and Travel Agency",
+    title: "HIKAYA Tour and Travel Agency",
+    description: "Your gateway to sacred Umrah journeys, flight tickets, and breathtaking tours across Ethiopia.",
+    url: "https://hikayatour.com",
+    siteName: "HIKAYA Tour and Travel Agency",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/destinations/umrah-makkah.jpg",
         width: 1200,
         height: 630,
-        alt: "Seif Tour and Travel Agency",
+        alt: "HIKAYA Tour and Travel Agency",
       },
     ],
     locale: "en_US",

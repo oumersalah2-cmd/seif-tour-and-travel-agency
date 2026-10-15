@@ -8,9 +8,53 @@ export interface Destination {
 }
 
 export const getDestinations = (lang: "en" | "om"): Destination[] => [
-  { id: "saudi-arabia", name: lang === "en" ? "Mecca & Medina" : "Makkaa fi Madiinaa", country: lang === "en" ? "Saudi Arabia" : "Saawud Arabiyaa", image: "https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?w=1600&q=90", tours: 42, featured: true },
-  { id: "dubai", name: lang === "en" ? "Dubai" : "Dubaay", country: lang === "en" ? "United Arab Emirates" : "Emereetota Arabaa Gamtooman", image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=90", tours: 24, featured: true },
-  { id: "turkey", name: lang === "en" ? "Istanbul" : "Istanbuul", country: lang === "en" ? "Turkey" : "Tarkii", image: "https://images.unsplash.com/photo-1527838832700-5059252407fa?w=1600&q=90", tours: 20, featured: true },
-  { id: "kuwait", name: lang === "en" ? "Kuwait City" : "Kuwaat Siitii", country: lang === "en" ? "Kuwait" : "Kuwaat", image: "https://images.unsplash.com/photo-1567074994308-df304d5611db?w=1600&q=90", tours: 12, featured: true },
-  { id: "qatar", name: lang === "en" ? "Doha" : "Dohaa", country: lang === "en" ? "Qatar" : "Qaataar", image: "https://images.unsplash.com/photo-1700901742651-6b353164caf3?w=1600&q=90", tours: 15, featured: true },
+  {
+    id: "sof-omar",
+    name: lang === "en" ? "Sof Omar Caves" : "Holqa Soof Umar",
+    country: lang === "en" ? "Bale, Ethiopia" : "Baalee, Itoophiyaa",
+    image: "/images/destinations/sof-omar.jpg",
+    tours: 18,
+    featured: true,
+  },
+  {
+    id: "wonchi",
+    name: lang === "en" ? "Wonchi Crater Lake" : "Haroo Wonchii",
+    country: lang === "en" ? "Oromia, Ethiopia" : "Oromiyaa, Itoophiyaa",
+    image: "/images/destinations/wonchi.jpg",
+    tours: 22,
+    featured: true,
+  },
+  {
+    id: "bale-mountains",
+    name: lang === "en" ? "Bale Mountains" : "Gaarren Baalee",
+    country: lang === "en" ? "Bale, Ethiopia" : "Baalee, Itoophiyaa",
+    image: "/images/destinations/bale-mountains.jpg",
+    tours: 16,
+    featured: true,
+  },
+  {
+    id: "semien-mountains",
+    name: lang === "en" ? "Semien Mountains (Samen Terara)" : "Gaarren Saameen (Samen Terara)",
+    country: lang === "en" ? "Ethiopia" : "Itoophiyaa",
+    image: "/images/destinations/semien-mountains.jpg",
+    tours: 15,
+    featured: true,
+  },
+  {
+    id: "afar-depression",
+    name: lang === "en" ? "Afar Depression (Danakil & Erta Ale)" : "Gammoojjii Affaar (Dallol & Erta Ale)",
+    country: lang === "en" ? "Afar, Ethiopia" : "Affaar, Itoophiyaa",
+    image: "/images/destinations/afar-danakil.jpg",
+    tours: 14,
+    featured: true,
+  },
+  {
+    id: "mecca-medina",
+    name: lang === "en" ? "Mecca & Medina (Umrah & Ziyarah)" : "Makkaa fi Madiinaa (Umrah fi Daawwannaa)",
+    country: lang === "en" ? "Saudi Arabia" : "Saawud Arabiyaa",
+    image: "/images/destinations/umrah-makkah.jpg",
+    tours: 35,
+    featured: true,
+  },
 ];
+
