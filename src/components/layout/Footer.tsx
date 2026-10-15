@@ -24,6 +24,7 @@ const getServiceLinks = (lang: string) => [
 ];
 
 const socialLinks = [
+  { icon: Send, href: "https://t.me/Seifa95", label: "Telegram" },
   { icon: Globe, href: "#", label: "Website" },
   { icon: Camera, href: "#", label: "Instagram" },
   { icon: MessageCircle, href: "#", label: "Twitter" },
@@ -124,6 +125,15 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-accent-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">info@hikayatour.com</span>
               </div>
+              <a
+                href="https://t.me/Seifa95"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-gray-300 hover:text-accent-300 transition-colors group"
+              >
+                <Send className="w-4 h-4 text-accent-400 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="text-sm">Telegram: @Seifa95</span>
+              </a>
             </div>
 
             <h5 className="font-semibold text-sm mb-3">{t.footer.newsletter}</h5>

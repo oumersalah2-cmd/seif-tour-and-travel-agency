@@ -6,7 +6,7 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import WhatsAppButton from "@/components/layout/WhatsAppButton";
+import TelegramButton from "@/components/layout/TelegramButton";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -38,6 +38,13 @@ export default function ContactPage() {
   };
 
   const contactInfo = [
+    {
+      icon: Send,
+      title: "Telegram Chatbot",
+      details: ["@Seifa95", "https://t.me/Seifa95"],
+      description: lang === "en" ? "Chat directly with our 24/7 instant booking & inquiry chatbot." : "Chatbot Telegram keenya wajjin odeeffannoo fi qabsiisuuf haasa'aa.",
+      link: "https://t.me/Seifa95",
+    },
     {
       icon: Phone,
       title: t.contact.callUs,
@@ -97,9 +104,21 @@ export default function ContactPage() {
                     </h3>
                     <div className="space-y-1 mb-2">
                       {info.details.map((detail, idx) => (
-                        <p key={idx} className="text-gray-700 dark:text-gray-300 font-medium">
-                          {detail}
-                        </p>
+                        info.link ? (
+                          <a
+                            key={idx}
+                            href={info.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-accent-500 hover:text-accent-600 font-semibold underline underline-offset-2 transition-colors"
+                          >
+                            {detail}
+                          </a>
+                        ) : (
+                          <p key={idx} className="text-gray-700 dark:text-gray-300 font-medium">
+                            {detail}
+                          </p>
+                        )
                       ))}
                     </div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -245,7 +264,7 @@ export default function ContactPage() {
         </div>
       </main>
       <Footer />
-      <WhatsAppButton />
+      <TelegramButton />
     </>
   );
 }
